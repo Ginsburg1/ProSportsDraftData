@@ -4,6 +4,8 @@
 # ProSportsDraftData
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/Ginsburg1/ProSportsDraftData/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Ginsburg1/ProSportsDraftData/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of ProSportsDraftData is to show draft data from different
