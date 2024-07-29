@@ -21,6 +21,4 @@ hello("John")
 hello("Steve")
 }
 
-
-
 }
