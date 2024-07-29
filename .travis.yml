@@ -6,7 +6,7 @@ warnings_are_errors: true
 
 ox:
   - linux
-  -osx
+  - osx
 
 
 r:
