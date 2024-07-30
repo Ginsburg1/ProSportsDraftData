@@ -78,13 +78,16 @@ head(nfl_data)
 nfl_2023 <- dplyr::filter(nfl_data, year == 2023)
 
 # Summarize the average weight of players by position
+library(tidyverse)
 avg_weight_by_position <- nfl_data \%>\%
-  dplyr::group_by(position) \%>\%
-  dplyr::summarize(avg_weight = mean(weight, na.rm = TRUE))
+ dplyr::filter(!is.na(weight)) \%>\%
+ dplyr::group_by(position) \%>\%
+ dplyr::summarize(avg_weight = mean(weight, na.rm = TRUE))
+ print(avg_weight_by_position, n = 100)
 
 
 # Count the number of players drafted from Alabama per year from ESPN
-alabama_drafts_per_year <- nfl_data \%>\%
+nfl_data \%>\%
   dplyr::filter(college == "Alabama", source == "ESPN") \%>\%
   dplyr::group_by(year) \%>\%
   dplyr::summarize(count = n())
