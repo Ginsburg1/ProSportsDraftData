@@ -76,24 +76,24 @@
 #'
 #' # View players who attended Duke
 #' library(dplyr)
-#' duke_players <- nba_data %>%
+#' duke_players <- nba_data |>
 #'   filter(college_abbreviation == "DUKE")
 #' print(duke_players)
 #'
 #' # Average score by position
-#' avg_score_by_position <- nba_data %>%
-#'   group_by(position) %>%
+#' avg_score_by_position <- nba_data |>
+#'   group_by(position) |>
 #'   summarise(avg_score = mean(player_score, na.rm = TRUE))
 #' print(avg_score_by_position)
 #'
 #' # Calculate the average points per 40 minutes
-#' avg_pts_per40 <- nba_data %>%
+#' avg_pts_per40 <- nba_data |>
 #'   summarise(avg_pts = mean(pts_per40, na.rm = TRUE))
 #' print(avg_pts_per40)
 #'
 #' # Count the number of players from each college
-#' college_counts <- nba_data %>%
-#'   group_by(college_abbreviation) %>%
+#' college_counts <- nba_data |>
+#'   group_by(college_abbreviation) |>
 #'   summarise(count = n())
 #' print(college_counts)
 #'
@@ -104,19 +104,10 @@
 #'   labs(title = "Distribution of Players' Heights", x = "Height (inches)", y = "Frequency")
 #'
 #' # Compare the average score of players by position
-#' avg_score_by_position <- nba_data %>%
-#'   group_by(position) %>%
+#' avg_score_by_position <- nba_data |>
+#'   group_by(position) |>
 #'   summarise(avg_score = mean(player_score, na.rm = TRUE))
 #' print(avg_score_by_position)
 #'
-#' # View players with a high potential rating
-#' high_potential_players <- nba_data %>%
-#'   filter(potential >= 8)
-#' print(high_potential_players)
-#'
-#' # Create a new column for height in meters
-#' nba_data <- nba_data %>%
-#'   mutate(height_meters = height * 0.0254)
-#' print(head(nba_data))
 #'
 "nba_data"

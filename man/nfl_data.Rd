@@ -19,6 +19,7 @@ A \code{tibble} with the following columns:
   \item{\code{pros}}{The pros of the player's abilities.}
   \item{\code{cons}}{The cons of the player's abilities.}
   \item{\code{similar_player}}{A similar player for comparison.}
+  \item{\code{similar_player_bio}}{Simular player compairson.}
   \item{\code{summary}}{A summary of the player's abilities.}
   \item{\code{arm_length}}{The arm length of the player.}
   \item{\code{hand_length}}{The hand length of the player.}
@@ -77,20 +78,6 @@ head(nfl_data)
 # Filter data for a specific year
 nfl_2023 <- dplyr::filter(nfl_data, year == 2023)
 
-# Summarize the average weight of players by position
-library(tidyverse)
-avg_weight_by_position <- nfl_data \%>\%
- dplyr::filter(!is.na(weight)) \%>\%
- dplyr::group_by(position) \%>\%
- dplyr::summarize(avg_weight = mean(weight, na.rm = TRUE))
- print(avg_weight_by_position, n = 100)
-
-
-# Count the number of players drafted from Alabama per year from ESPN
-nfl_data \%>\%
-  dplyr::filter(college == "Alabama", source == "ESPN") \%>\%
-  dplyr::group_by(year) \%>\%
-  dplyr::summarize(count = n())
 
 }
 \keyword{datasets}

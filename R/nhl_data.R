@@ -35,7 +35,7 @@
 #'
 #'
 #' # Filter the data to include only ESPN as the source
-#' nhl_data_espn <- nhl_data %>%
+#' nhl_data_espn <- nhl_data |>
 #'   dplyr::filter(source == "ESPN")
 #'
 #' # Plot the number of players drafted from each league (ESPN source only)
@@ -47,14 +47,5 @@
 #'        x = "League",
 #'        y = "Number of Players")
 #'
-#'
-"nhl_data"
-
-
-
-
-
-
-
 #'
 "nhl_data"
