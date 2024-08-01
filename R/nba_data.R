@@ -97,17 +97,5 @@
 #'   summarise(count = n())
 #' print(college_counts)
 #'
-#' # Plot the distribution of players' heights
-#' library(ggplot2)
-#' ggplot(nba_data, aes(x = height)) +
-#'   geom_histogram(binwidth = 1, fill = "blue", color = "black") +
-#'   labs(title = "Distribution of Players' Heights", x = "Height (inches)", y = "Frequency")
-#'
-#' # Compare the average score of players by position
-#' avg_score_by_position <- nba_data |>
-#'   group_by(position) |>
-#'   summarise(avg_score = mean(player_score, na.rm = TRUE))
-#' print(avg_score_by_position)
-#'
 #'
 "nba_data"

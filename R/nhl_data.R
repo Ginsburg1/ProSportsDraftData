@@ -38,14 +38,6 @@
 #' nhl_data_espn <- nhl_data |>
 #'   dplyr::filter(source == "ESPN")
 #'
-#' # Plot the number of players drafted from each league (ESPN source only)
-#' library(ggplot2)
-#' ggplot(nhl_data_espn, aes(x = league)) +
-#'   geom_bar() +
-#'   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-#'   labs(title = "Number of Players Drafted from Each League (ESPN)",
-#'        x = "League",
-#'        y = "Number of Players")
 #'
 #'
 "nhl_data"
