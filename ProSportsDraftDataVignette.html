@@ -342,7 +342,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;Ginsburg1/ProSportsDraftData&quot;</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="co">#&gt; Using GitHub PAT from the git credential store.</span></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="co">#&gt; Skipping install of &#39;ProSportsDraftData&#39; from a github remote, the SHA1 (2b23c052) has not changed since last install.</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="co">#&gt; Skipping install of &#39;ProSportsDraftData&#39; from a github remote, the SHA1 (13b240b7) has not changed since last install.</span></span>
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="co">#&gt;   Use `force = TRUE` to force installation</span></span>
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu">library</span>(ProSportsDraftData)</span></code></pre></div>
 <p>#Loading NHL Data First, let’s load the NHL data provided by the
@@ -373,18 +373,47 @@ multiple sources. The three different datasouces are</p>
 functions:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>nhl_base_data <span class="ot">&lt;-</span> <span class="fu">nhl_data_base</span>()</span>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">head</span>(nhl_base_data)</span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">#&gt; # A tibble: 0 × 3</span></span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co">#&gt; # ℹ 3 variables: name &lt;chr&gt;, round &lt;int&gt;, rank &lt;int&gt;</span></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="fu">nhl_data_espn</span>()</span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="co">#&gt; # A tibble: 0 × 9</span></span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="co">#&gt; # ℹ 9 variables: name &lt;chr&gt;, year &lt;int&gt;, date_of_birth &lt;chr&gt;, age &lt;int&gt;,</span></span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="co">#&gt; #   current_team &lt;chr&gt;, league &lt;chr&gt;, scouting_report &lt;chr&gt;, team_fit &lt;chr&gt;,</span></span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="co">#&gt; #   likely_to_play &lt;chr&gt;</span></span>
-<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="fu">nhl_data_nhl.com</span>()</span>
-<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a><span class="co">#&gt; # A tibble: 0 × 8</span></span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="co">#&gt; # ℹ 8 variables: name &lt;chr&gt;, year &lt;int&gt;, position &lt;chr&gt;, city &lt;chr&gt;,</span></span>
-<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="co">#&gt; #   team &lt;chr&gt;, league &lt;chr&gt;, scouting_report &lt;chr&gt;, analysis &lt;chr&gt;</span></span></code></pre></div>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 × 3</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co">#&gt;   name          round  rank</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;         &lt;dbl&gt; &lt;dbl&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="co">#&gt; 1 Jack Hughes       1     1</span></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="co">#&gt; 2 Kaapo Kakko       1     2</span></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="co">#&gt; 3 Kirby Dach        1     3</span></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="co">#&gt; 4 Bowen Byram       1     4</span></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="co">#&gt; 5 Alex Turcotte     1     5</span></span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="co">#&gt; 6 Moritz Seider     1     6</span></span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="fu">nhl_data_espn</span>()</span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="co">#&gt; # A tibble: 190 × 9</span></span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co">#&gt;    name    year date_of_birth   age current_team league scouting_report team_fit</span></span>
+<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a><span class="co">#&gt;    &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt;  &lt;chr&gt;           &lt;chr&gt;   </span></span>
+<span id="cb3-17"><a href="#cb3-17" tabindex="-1"></a><span class="co">#&gt;  1 Jack …  2019 &lt;NA&gt;             18 USA U18      NTDP   Hughes has suc… &lt;NA&gt;    </span></span>
+<span id="cb3-18"><a href="#cb3-18" tabindex="-1"></a><span class="co">#&gt;  2 Kaapo…  2019 &lt;NA&gt;             18 TPS          Finla… Kakko has a gr… &lt;NA&gt;    </span></span>
+<span id="cb3-19"><a href="#cb3-19" tabindex="-1"></a><span class="co">#&gt;  3 Kirby…  2019 &lt;NA&gt;             18 Saskatoon    WHL    Dach has size,… &lt;NA&gt;    </span></span>
+<span id="cb3-20"><a href="#cb3-20" tabindex="-1"></a><span class="co">#&gt;  4 Bowen…  2019 &lt;NA&gt;             18 Vancouver    WHL    There is no de… &lt;NA&gt;    </span></span>
+<span id="cb3-21"><a href="#cb3-21" tabindex="-1"></a><span class="co">#&gt;  5 Alex …  2019 &lt;NA&gt;             18 USA U18      NTDP   He is a smart,… &lt;NA&gt;    </span></span>
+<span id="cb3-22"><a href="#cb3-22" tabindex="-1"></a><span class="co">#&gt;  6 Morit…  2019 &lt;NA&gt;             18 Mannheim     Germa… One of the mos… &lt;NA&gt;    </span></span>
+<span id="cb3-23"><a href="#cb3-23" tabindex="-1"></a><span class="co">#&gt;  7 Dylan…  2019 &lt;NA&gt;             18 Lethbridge   WHL    A strong skate… &lt;NA&gt;    </span></span>
+<span id="cb3-24"><a href="#cb3-24" tabindex="-1"></a><span class="co">#&gt;  8 Phili…  2019 &lt;NA&gt;             17 AIK          Swede… One of the bes… &lt;NA&gt;    </span></span>
+<span id="cb3-25"><a href="#cb3-25" tabindex="-1"></a><span class="co">#&gt;  9 Trevo…  2019 &lt;NA&gt;             18 USA U18      NTDP   With elite vis… &lt;NA&gt;    </span></span>
+<span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a><span class="co">#&gt; 10 Vasil…  2019 &lt;NA&gt;             17 Neva St. Pe… Russi… He remains und… &lt;NA&gt;    </span></span>
+<span id="cb3-27"><a href="#cb3-27" tabindex="-1"></a><span class="co">#&gt; # ℹ 180 more rows</span></span>
+<span id="cb3-28"><a href="#cb3-28" tabindex="-1"></a><span class="co">#&gt; # ℹ 1 more variable: likely_to_play &lt;chr&gt;</span></span>
+<span id="cb3-29"><a href="#cb3-29" tabindex="-1"></a><span class="fu">nhl_data_nhl.com</span>()</span>
+<span id="cb3-30"><a href="#cb3-30" tabindex="-1"></a><span class="co">#&gt; # A tibble: 191 × 8</span></span>
+<span id="cb3-31"><a href="#cb3-31" tabindex="-1"></a><span class="co">#&gt;    name            year position city      team  league scouting_report analysis</span></span>
+<span id="cb3-32"><a href="#cb3-32" tabindex="-1"></a><span class="co">#&gt;    &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;           &lt;chr&gt;   </span></span>
+<span id="cb3-33"><a href="#cb3-33" tabindex="-1"></a><span class="co">#&gt;  1 &lt;NA&gt;              NA &lt;NA&gt;     &lt;NA&gt;      &lt;NA&gt;  &lt;NA&gt;   &quot;is the highes… &quot;In bit…</span></span>
+<span id="cb3-34"><a href="#cb3-34" tabindex="-1"></a><span class="co">#&gt;  2 &lt;NA&gt;              NA &lt;NA&gt;     &lt;NA&gt;      &lt;NA&gt;  &lt;NA&gt;   &quot;Dahlin (6-foo… &quot;The Sa…</span></span>
+<span id="cb3-35"><a href="#cb3-35" tabindex="-1"></a><span class="co">#&gt;  3 Jack Hughes     2019 &lt;NA&gt;     &lt;NA&gt;      New … &lt;NA&gt;   &quot;The first pla… &quot;The De…</span></span>
+<span id="cb3-36"><a href="#cb3-36" tabindex="-1"></a><span class="co">#&gt;  4 Kaapo Kakko     2019 RW       TPS       New … FIN    &quot;The left-hand… &quot;Kakko …</span></span>
+<span id="cb3-37"><a href="#cb3-37" tabindex="-1"></a><span class="co">#&gt;  5 Kirby Dach      2019 &lt;NA&gt;     &lt;NA&gt;      Chic… &lt;NA&gt;   &quot;Dach, who con… &quot;The ce…</span></span>
+<span id="cb3-38"><a href="#cb3-38" tabindex="-1"></a><span class="co">#&gt;  6 Bowen Byram     2019 &lt;NA&gt;     &lt;NA&gt;      Colo… &lt;NA&gt;   &quot;Byram (6-1, 1… &quot;The Av…</span></span>
+<span id="cb3-39"><a href="#cb3-39" tabindex="-1"></a><span class="co">#&gt;  7 Alex Turcotte   2019 C        USA U-18  Los … USHL   &quot;Turcotte (5-1… &quot;The Ki…</span></span>
+<span id="cb3-40"><a href="#cb3-40" tabindex="-1"></a><span class="co">#&gt;  8 Moritz Seider   2019 D        Mannheim  Detr… GER    &quot;Seider (6-3, … &quot;The fi…</span></span>
+<span id="cb3-41"><a href="#cb3-41" tabindex="-1"></a><span class="co">#&gt;  9 Dylan Cozens    2019 C        Lethbrid… Buff… WHL    &quot;Cozens (6-3, … &quot;With J…</span></span>
+<span id="cb3-42"><a href="#cb3-42" tabindex="-1"></a><span class="co">#&gt; 10 Philip Broberg  2019 D        AIK       Edmo… SWE-2  &quot;The left-shot… &quot;The Oi…</span></span>
+<span id="cb3-43"><a href="#cb3-43" tabindex="-1"></a><span class="co">#&gt; # ℹ 181 more rows</span></span></code></pre></div>
 
 
 
