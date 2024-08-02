@@ -42,8 +42,6 @@
 "nhl_data"
 
 #' @export
-
-
 nhl_data <- tibble::tibble(
   source = character(),
   name = character(),
