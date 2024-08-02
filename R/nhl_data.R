@@ -39,5 +39,36 @@
 #'   dplyr::filter(source == "ESPN")
 #'
 #'
+#' @export
+nhl_data_base <- function(source_value = "Base") {
+  nhl_data |>
+    dplyr::filter(source == source_value)|>
+    dplyr::select(name, rank)
+}
+nhl_data_espn <- function(source_value = "ESPN") {
+  nhl_data |>
+    dplyr::filter(source == source_value)|>
+    dplyr::select(name,
+                  year,
+                  date_of_birth,
+                  age,
+                  current_team,
+                  league,
+                  scouting_report,
+                  team_fit,
+                  likely_to_play)
+}
+nhl_data_nhl.com <- function(source_value = "NHL.com") {
+  nhl_data |>
+    dplyr::filter(source == source_value)|>
+    dplyr::select(name,
+                  year,
+                  position,
+                  city,
+                  team,
+                  league,
+                  scouting_report,
+                  analysis)
+}
 #'
 "nhl_data"
