@@ -4,10 +4,7 @@
 \alias{nhl_data_espn}
 \title{NHL Data ESPN}
 \usage{
-nhl_data_espn(source_value = "ESPN")
-}
-\arguments{
-\item{source_value}{A character string specifying the source of the data. Default is "ESPN".}
+nhl_data_espn()
 }
 \value{
 A filtered and selected tibble of NHL data from ESPN.

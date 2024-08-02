@@ -4,10 +4,7 @@
 \alias{nhl_data_base}
 \title{NHL Data Base}
 \usage{
-nhl_data_base(source_value = "Base")
-}
-\arguments{
-\item{source_value}{A character string specifying the source of the data. Default is "Base".}
+nhl_data_base()
 }
 \value{
 A filtered and selected tibble of NHL data.

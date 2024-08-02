@@ -23,7 +23,6 @@ library(ProSportsDraftData)
 First, let's load the NHL data provided by the package.
 
 ```{r}
-data(nhl_data)
 head(nhl_data)
 ```
 
@@ -37,7 +36,9 @@ The NHL data has been compiled from multiple sources. The three different dataso
 To see the data from a specific source, use of the following functions:
 
 ```{r}
-nhl_data_base()
+nhl_base_data <- nhl_data_base()
+head(nhl_base_data)
+
 nhl_data_espn()
 nhl_data_nhl.com()
 ```

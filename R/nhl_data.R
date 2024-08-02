@@ -60,18 +60,18 @@ nhl_data <- tibble::tibble(
   team = character(),
   analysis = character()
 )
+load("data/nhl_data.rda")
 #' Filter NHL Data by Source (Base)
 #'
 #' Filters and selects NHL data from the base source for the given source value.
 #'
-#' @param source_value A character string specifying the source of the data. Default is "Base".
 #' @return A filtered and selected tibble of NHL data.
 #' @export
 #' @name nhl_data_base
 #' @title NHL Data Base
-nhl_data_base <- function(source_value = "Base") {
+nhl_data_base <- function() {
   nhl_data |>
-    dplyr::filter(source == source_value) |>
+    dplyr::filter(source == "Base") |>
     dplyr::select(name, round, rank)
 }
 
@@ -79,14 +79,13 @@ nhl_data_base <- function(source_value = "Base") {
 #'
 #' Filters and selects NHL data from ESPN for the given source value.
 #'
-#' @param source_value A character string specifying the source of the data. Default is "ESPN".
 #' @return A filtered and selected tibble of NHL data from ESPN.
 #' @export
 #' @name nhl_data_espn
 #' @title NHL Data ESPN
-nhl_data_espn <- function(source_value = "ESPN") {
+nhl_data_espn <- function() {
   nhl_data |>
-    dplyr::filter(source == source_value) |>
+    dplyr::filter(source == "ESPN") |>
     dplyr::select(name,
                   year,
                   date_of_birth,
@@ -102,14 +101,13 @@ nhl_data_espn <- function(source_value = "ESPN") {
 #'
 #' Filters and selects NHL data from NHL.com for the given source value.
 #'
-#' @param source_value A character string specifying the source of the data. Default is "NHL.com".
 #' @return A filtered and selected tibble of NHL data from NHL.com.
 #' @export
 #' @name nhl_data_nhl_com
 #' @title NHL Data NHL.com
-nhl_data_nhl.com <- function(source_value = "NHL.com") {
+nhl_data_nhl.com <- function() {
   nhl_data |>
-    dplyr::filter(source == source_value) |>
+    dplyr::filter(source == "NHL.com") |>
     dplyr::select(name,
                   year,
                   position,
