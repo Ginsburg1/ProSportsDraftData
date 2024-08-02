@@ -1,6 +1,7 @@
 #' NHL Draft Data
 #'
 #' @description A dataset of all first-round picks in the NHL, including various draft metrics.
+#'
 #' @format A \code{tibble} with the following columns:
 #' \describe{
 #'   \item{\code{source}}{The source of the data.}
@@ -31,23 +32,63 @@
 #' nhl_2023 <- dplyr::filter(nhl_data, year == 2023)
 #'
 #' # View the first few rows
-#' head(nhl_data)
-#'
+#' head(nhl_2023)
 #'
 #' # Filter the data to include only ESPN as the source
 #' nhl_data_espn <- nhl_data |>
 #'   dplyr::filter(source == "ESPN")
 #'
-#'
 #' @export
+"nhl_data"
+
+#' @export
+
+
+nhl_data <- tibble::tibble(
+  source = character(),
+  name = character(),
+  year = integer(),
+  rank = integer(),
+  round = integer(),
+  date_of_birth = character(),
+  age = integer(),
+  current_team = character(),
+  league = character(),
+  scouting_report = character(),
+  team_fit = character(),
+  likely_to_play = character(),
+  position = character(),
+  city = character(),
+  team = character(),
+  analysis = character()
+)
+#' Filter NHL Data by Source (Base)
+#'
+#' Filters and selects NHL data from the base source for the given source value.
+#'
+#' @param source_value A character string specifying the source of the data. Default is "Base".
+#' @return A filtered and selected tibble of NHL data.
+#' @export
+#' @name nhl_data_base
+#' @title NHL Data Base
 nhl_data_base <- function(source_value = "Base") {
   nhl_data |>
-    dplyr::filter(source == source_value)|>
-    dplyr::select(name, rank)
+    dplyr::filter(source == source_value) |>
+    dplyr::select(.data$name, .data$rank)
 }
+
+#' Filter NHL Data by Source (ESPN)
+#'
+#' Filters and selects NHL data from ESPN for the given source value.
+#'
+#' @param source_value A character string specifying the source of the data. Default is "ESPN".
+#' @return A filtered and selected tibble of NHL data from ESPN.
+#' @export
+#' @name nhl_data_espn
+#' @title NHL Data ESPN
 nhl_data_espn <- function(source_value = "ESPN") {
   nhl_data |>
-    dplyr::filter(source == source_value)|>
+    dplyr::filter(source == source_value) |>
     dplyr::select(name,
                   year,
                   date_of_birth,
@@ -58,9 +99,19 @@ nhl_data_espn <- function(source_value = "ESPN") {
                   team_fit,
                   likely_to_play)
 }
+
+#' Filter NHL Data by Source (NHL.com)
+#'
+#' Filters and selects NHL data from NHL.com for the given source value.
+#'
+#' @param source_value A character string specifying the source of the data. Default is "NHL.com".
+#' @return A filtered and selected tibble of NHL data from NHL.com.
+#' @export
+#' @name nhl_data_nhl_com
+#' @title NHL Data NHL.com
 nhl_data_nhl.com <- function(source_value = "NHL.com") {
   nhl_data |>
-    dplyr::filter(source == source_value)|>
+    dplyr::filter(source == source_value) |>
     dplyr::select(name,
                   year,
                   position,
@@ -70,5 +121,3 @@ nhl_data_nhl.com <- function(source_value = "NHL.com") {
                   scouting_report,
                   analysis)
 }
-#'
-"nhl_data"

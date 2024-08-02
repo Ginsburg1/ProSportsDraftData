@@ -1,6 +1,8 @@
 #' NBA Draft Data
 #'
 #' @description A dataset of all first-round picks in the NBA, including various draft metrics.
+#'
+#'
 #' @format A \code{tibble} with the following columns:
 #' \describe{
 #'   \item{\code{source}}{The source of the data.}
