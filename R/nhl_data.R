@@ -74,7 +74,7 @@ nhl_data <- tibble::tibble(
 nhl_data_base <- function(source_value = "Base") {
   nhl_data |>
     dplyr::filter(source == source_value) |>
-    dplyr::select(.data$name, .data$rank)
+    dplyr::select(name, round, rank)
 }
 
 #' Filter NHL Data by Source (ESPN)

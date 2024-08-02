@@ -17,3 +17,26 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(ProSportsDraftData)
 ```
+
+#Loading NHL Data
+First, let's load the NHL data provided by the package.
+
+```{r}
+nhl_data
+head(nhl_data)
+```
+
+#Filtering By Data Source
+The NHL data has been compiled from multiple sources. The three different datasouces are
+
+- **Base (ESPN.com)**: Data from ESPN.com
+- **ESPN**: Data from ESPN
+- **NHL.com**: Data from NHL.com
+
+To see the data from a specifc source, use of the following functions:
+
+```{r}
+nhl_data_base()
+nhl_data_espn()
+nhl_data_nhl()
+```
