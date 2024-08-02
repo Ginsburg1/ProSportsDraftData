@@ -2,13 +2,9 @@
 % Please edit documentation in R/nhl_data.R
 \name{nhl_data_nhl_com}
 \alias{nhl_data_nhl_com}
-\alias{nhl_data_nhl.com}
 \title{NHL Data NHL.com}
 \usage{
-nhl_data_nhl.com(source_value = "NHL.com")
-}
-\arguments{
-\item{source_value}{A character string specifying the source of the data. Default is "NHL.com".}
+nhl_data_nhl_com()
 }
 \value{
 A filtered and selected tibble of NHL data from NHL.com.
