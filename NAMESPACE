@@ -3,4 +3,4 @@
 export(nhl_data)
 export(nhl_data_base)
 export(nhl_data_espn)
-export(nhl_data_nhl_com)
+export(nhl_data_nhl.com)

@@ -2,9 +2,10 @@
 % Please edit documentation in R/nhl_data.R
 \name{nhl_data_nhl_com}
 \alias{nhl_data_nhl_com}
+\alias{nhl_data_nhl.com}
 \title{NHL Data NHL.com}
 \usage{
-nhl_data_nhl_com()
+nhl_data_nhl.com()
 }
 \value{
 A filtered and selected tibble of NHL data from NHL.com.
