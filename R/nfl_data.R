@@ -71,3 +71,207 @@
 #'
 #'
 "nfl_data"
+
+# Define the nfl_data tibble
+#' @export
+nfl_data <- tibble::tibble(
+  source = character(),
+  name = character(),
+  year = integer(),
+  rank = integer(),
+  round = integer(),
+  height = character(),
+  weight = character(),
+  position = character(),
+  college = character(),
+  pros = character(),
+  cons = character(),
+  similar_player = character(),
+  similar_player_bio = character(),
+  summary = character(),
+  arm_length = character(),
+  hand_length = character(),
+  next_gen_production_score = character(),
+  next_gen_athleticism_score = character(),
+  forty_yard_dash = character(),
+  vertical_jump = character(),
+  nfl_prospect_grade = character(),
+  home_town = character(),
+  broad_jump = character(),
+  three_cone_drill = character(),
+  twenty_yard_shuttle = character(),
+  bench_press = character(),
+  college_abbrivation = character(),
+  pre_draft = character(),
+  post_draft = character(),
+  position_rank = character(),
+  overall_rank = character(),
+  grade = character(),
+  school = character(),
+  yds = character(),
+  ypa = character(),
+  ypr = character(),
+  tds = character(),
+  ints = character(),
+  rtg = character(),
+  tkls = character(),
+  tfl = character(),
+  ypc = character(),
+  pbu = character(),
+  twenty_plus = character(),
+  sacks = character(),
+  gms = character(),
+  strts = character(),
+  sk_all = character(),
+  age = character(),
+  main_selling_point = character(),
+  description = character(),
+  scouting_report = character(),
+  score = character()
+)
+
+# Load the data
+load("data/nfl_data.rda")
+
+#' Filter NFL Data by Source (Base)
+#'
+#' Filters and selects NFL data from the base source for the given source value.
+#'
+#' @return A filtered and selected tibble of NFL data.
+#' @export
+#' @name nfl_data_base
+#' @title NFL Data Base
+nfl_data_base <- function() {
+  nfl_data |>
+    dplyr::filter(source == "Base") |>
+    dplyr::select(name, round, rank)
+}
+
+#' Filter NFL Data by Source (ESPN)
+#'
+#' Filters and selects NFL data from ESPN for the given source value.
+#'
+#' @return A filtered and selected tibble of NFL data from ESPN.
+#' @export
+#' @name nfl_data_espn
+#' @title NFL Data ESPN
+nfl_data_espn <- function() {
+  nfl_data |>
+    dplyr::filter(source == "ESPN") |>
+    dplyr::select(name,
+                  year,
+                  height,
+                  weight,
+                  position,
+                  college,
+                  pros,
+                  cons,
+                  similar_player,
+                  summary)
+}
+
+#' Filter NFL Data by Source (Walter Football)
+#'
+#' Filters and selects NFL data from Walter Football for the given source value.
+#'
+#' @return A filtered and selected tibble of NFL data from Walter Football.
+#' @export
+#' @name nfl_data_walter_football
+#' @title NFL Data Walter Football
+nfl_data_walter_football <- function() {
+  nfl_data |>
+    dplyr::filter(source == "walterfootball.com") |>
+    dplyr::select(name,
+                  year,
+                  height,
+                  weight,
+                  arm_length,
+                  hand_length,
+                  next_gen_production_score,
+                  next_gen_athleticism_score,
+                  forty_yard_dash,
+                  vertical_jump,
+                  nfl_prospect_grade,
+                  home_town,
+                  broad_jump,
+                  three_cone_drill,
+                  twenty_yard_shuttle,
+                  bench_press,
+                  similar_player,
+                  summary,
+                  pros,
+                  cons)
+}
+
+#' Filter NFL Data by Source (ESPN)
+#'
+#' Filters and selects NFL data from ESPN for the given source value.
+#'
+#' @return A filtered and selected tibble of NFL data from ESPN.
+#' @export
+#' @name nfl_data_espn
+#' @title NFL Data ESPN
+nfl_data_espn_extended <- function() {
+  nfl_data |>
+    dplyr::filter(source == "ESPN") |>
+    dplyr::select(name,
+                  year,
+                  height,
+                  weight,
+                  college,
+                  college_abbrivation,
+                  pre_draft,
+                  post_draft,
+                  position_rank,
+                  overall_rank,
+                  score)
+}
+
+#' Filter NFL Data by Source (The Ringer)
+#'
+#' Filters and selects NFL data from The Ringer for the given source value.
+#'
+#' @return A filtered and selected tibble of NFL data from The Ringer.
+#' @export
+#' @name nfl_data_the_ringer
+#' @title NFL Data The Ringer
+nfl_data_the_ringer <- function() {
+  nfl_data |>
+    dplyr::filter(source == "The Ringer") |>
+    dplyr::select(name,
+                  rank,
+                  year,
+                  position,
+                  school,
+                  grade,
+                  yds,
+                  ypa,
+                  ypr,
+                  tds,
+                  ints,
+                  rtg,
+                  tkls,
+                  tfl,
+                  ypc,
+                  pbu,
+                  twenty_plus,
+                  sacks,
+                  gms,
+                  strts,
+                  sk_all,
+                  height,
+                  weight,
+                  age,
+                  main_selling_point,
+                  description,
+                  similar_player,
+                  scouting_report,
+                  pros,
+                  cons
+                  #,
+               #   similar_player_bio
+
+               )
+}
+
+

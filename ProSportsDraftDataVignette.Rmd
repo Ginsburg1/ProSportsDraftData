@@ -19,6 +19,102 @@ devtools::install_github("Ginsburg1/ProSportsDraftData")
 library(ProSportsDraftData)
 ```
 
+
+## Available Datasets
+
+The `ProSportsDraftData` package provides several datasets:
+
+- **nfl_data**: NFL draft data
+- **nhl_data**: NHL draft data
+- **nba_data**: NBA draft data
+
+## The `nfl` Dataset
+
+The `nfl` dataset includes the following datapoints:
+
+- **source**: The source of the data.
+- **name**: The name of the player.
+- **year**: The year of the draft.
+- **rank**: The rank of the player.
+- **round**: The round in which the player was drafted.
+- **height**: The height of the player.
+- **weight**: The weight of the player.
+- **position**: The position of the player.
+- **college**: The college the player attended.
+- **pros**: The pros of the player’s abilities.
+- **cons**: The cons of the player’s abilities.
+- **similar_player**: A similar player for comparison.
+- **similar_player_bio**: Similar player comparison.
+- **summary**: A summary of the player’s abilities.
+- **arm_length**: The arm length of the player.
+- **hand_length**: The hand length of the player.
+- **next_gen_production_score**: The Next Gen production score.
+- **next_gen_athleticism_score**: The Next Gen athleticism score.
+- **forty_yard_dash**: The forty-yard dash time.
+- **vertical_jump**: The vertical jump height.
+- **nfl_prospect_grade**: The NFL prospect grade.
+- **home_town**: The hometown of the player.
+- **broad_jump**: The broad jump distance.
+- **three_cone_drill**: The three-cone drill time.
+- **twenty_yard_shuttle**: The twenty-yard shuttle time.
+- **bench_press**: The bench press reps.
+- **college_abbrivation**: The abbreviation of the college.
+- **pre_draft**: Pre-draft information.
+- **post_draft**: Post-draft information.
+- **position_rank**: The position rank of the player.
+- **overall_rank**: The overall rank of the player.
+- **grade**: The grade of the player.
+- **school**: The school the player attended.
+- **yds**: Yards the player ran.
+- **ypa**: The yards per attempt.
+- **ypr**: The yards per reception.
+- **tds**: Number of touchdowns the player performed.
+- **ints**: The interceptions.
+- **rtg**: The rating of the player.
+- **tkls**: The number of tackles of the player.
+- **tfl**: The tackles for loss.
+- **ypc**: The yards per carry.
+- **pbu**: The pass break-ups of the player.
+- **twenty_plus**: Plays of twenty or more yards.
+- **sacks**: Number of sacks of the player.
+- **gms**: The number of games played.
+- **strts**: The number of games started.
+- **sk_all**: The number of sacks allowed.
+- **age**: The age of the player.
+- **main_selling_point**: The main selling point of the player.
+- **description**: The description of the player.
+- **scouting_report**: The scouting report.
+- **score**: Player’s score from 1-100.
+
+#Loading NFL Data
+First, let's load the NHL data provided by the package.
+
+```{r}
+head(nfl_data)
+```
+
+## The `nhl_df` Dataset
+
+The `nhl_df` dataset includes the following datapoints:
+
+- **source**: The source of the data.
+- **name**: The name of the player.
+- **year**: The year of the draft.
+- **rank**: The rank of the player.
+- **round**: The round in which the player was drafted.
+- **date_of_birth**: The date of birth of the player.
+- **age**: The age of the player.
+- **current_team**: The current team of the player.
+- **league**: The league in which the player plays.
+- **scouting_report**: The scouting report of the player.
+- **team_fit**: The fit of the player within the team.
+- **likely_to_play**: The likelihood of the player to play in the NHL.
+- **position**: The position of the player.
+- **city**: The city associated with the player.
+- **team**: The team of the player.
+- **analysis**: An analysis of the player’s abilities.
+
+
 #Loading NHL Data
 First, let's load the NHL data provided by the package.
 
@@ -41,4 +137,81 @@ head(nhl_base_data)
 
 nhl_data_espn()
 nhl_data_nhl.com()
+```
+
+
+## The `nba_csv` Dataset
+
+The `nba_csv` dataset includes the following datapoints:
+
+- **source**: The source of the data.
+- **name**: The name of the player.
+- **year**: The year of the draft.
+- **rank**: The rank of the player.
+- **round**: The round in which the player was drafted.
+- **height**: The height of the player.
+- **weight**: The weight of the player.
+- **school**: The school the player attended.
+- **college_abbreviation**: The abbreviation of the college.
+- **pros**: The pros of the player’s abilities.
+- **cons**: The cons of the player’s abilities.
+- **verdict**: The verdict on the player's potential.
+- **pre_draft_analysis**: Pre-draft analysis of the player.
+- **post_draft_analysis**: Post-draft analysis of the player.
+- **ranking**: The player's ranking.
+- **player_score**: The player's score.
+- **position**: The position of the player.
+- **grade**: The grade of the player.
+- **pts_total**: Total points scored by the player.
+- **pts_per40**: Points scored per 40 minutes.
+- **reb_total**: Total rebounds by the player.
+- **reb_per40**: Rebounds per 40 minutes.
+- **ast_total**: Total assists by the player.
+- **ast_per40**: Assists per 40 minutes.
+- **efg**: Effective field goal percentage.
+- **fga**: Field goals attempted.
+- **stl_total**: Total steals by the player.
+- **stl_per40**: Steals per 40 minutes.
+- **blk_total**: Total blocks by the player.
+- **blk_per40**: Blocks per 40 minutes.
+- **tpt**: Three-point shots made.
+- **tpa**: Three-point shots attempted.
+- **ft**: Free throws made.
+- **fta**: Free throws attempted.
+- **ts**: True shooting percentage.
+- **ts_att**: True shooting attempts.
+- **main_selling_point**: The main selling point of the player.
+- **age**: The age of the player.
+- **wingspan**: The wingspan of the player.
+- **standing_reach**: The standing reach of the player.
+- **similar_player**: A similar player for comparison.
+- **profile**: The profile of the player.
+- **analysis**: An analysis of the player’s abilities.
+- **projection**: The projection of the player's future performance.
+- **date_of_birth**: The date of birth of the player.
+- **hometown**: The hometown of the player.
+- **high_school**: The high school the player attended.
+- **rebounding**: The rebounding ability of the player.
+- **potential**: The potential of the player.
+- **post_skills**: The post skills of the player.
+- **intangibles**: The intangibles of the player.
+- **international_team**: The international team of the player.
+- **athleticism**: The athleticism of the player.
+- **size**: The size of the player.
+- **defense**: The defensive skills of the player.
+- **strength**: The strength of the player.
+- **quickness**: The quickness of the player.
+- **leadership**: The leadership qualities of the player.
+- **jumpshot**: The jump shot ability of the player.
+- **nba_ready**: The NBA readiness of the player.
+- **mock_draft_rank**: The player's mock draft rank.
+- **big_board_rank**: The player's big board rank.
+- **overall_rank**: The overall rank of the player.
+
+
+#Loading NBA Data
+First, let's load the NBA data provided by the package.
+
+```{r}
+head(nba_data)
 ```
