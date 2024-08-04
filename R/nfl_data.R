@@ -203,30 +203,6 @@ nfl_data_walter_football <- function() {
                   cons)
 }
 
-#' Filter NFL Data by Source (ESPN)
-#'
-#' Filters and selects NFL data from ESPN for the given source value.
-#'
-#' @return A filtered and selected tibble of NFL data from ESPN.
-#' @export
-#' @name nfl_data_espn
-#' @title NFL Data ESPN
-nfl_data_espn_extended <- function() {
-  nfl_data |>
-    dplyr::filter(source == "ESPN") |>
-    dplyr::select(name,
-                  year,
-                  height,
-                  weight,
-                  college,
-                  college_abbrivation,
-                  pre_draft,
-                  post_draft,
-                  position_rank,
-                  overall_rank,
-                  score)
-}
-
 #' Filter NFL Data by Source (The Ringer)
 #'
 #' Filters and selects NFL data from The Ringer for the given source value.
@@ -273,5 +249,4 @@ nfl_data_the_ringer <- function() {
 
                )
 }
-
-
+##WHITE NFL.com WHEN READY

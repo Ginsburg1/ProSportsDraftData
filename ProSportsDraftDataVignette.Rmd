@@ -14,23 +14,73 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
-devtools::install_github("Ginsburg1/ProSportsDraftData")
-library(ProSportsDraftData)
-```
+
+## How to run and install the packages:
+`devtools::install_github("Ginsburg1/ProSportsDraftData")`
+
+`library(ProSportsDraftData)`
+
+## Nescessities 
+
+- **R** (Version 3.5 or greater)
+
+
+## Overview of the project
+
+The purpose of the project is to have an R package that contains scouting report data for players in the NHL, MLB, and NFL. Each league has data from multiple sources that can be easily accessed and analysed. This document lays out the different variables that each dataset contains as well as pre built funtions that only show data from each source
 
 
 ## Available Datasets
 
-The `ProSportsDraftData` package provides several datasets:
+The `ProSportsDraftData` package provides several data sets:
 
 - **nfl_data**: NFL draft data
 - **nhl_data**: NHL draft data
 - **nba_data**: NBA draft data
 
+## Sources and Citations
+
+- **Base**: Base was used to establish a standard naming convention for players, avoiding confusion caused by nicknames or different variations of names among different sources. 
+  - **NFL**: https://www.espn.com/nfl/draft/rounds/_/round/
+  - **NBA**: https://www.espn.com/nba/draft/rounds/_/round/
+  - **NHL**: http://www.mynhldraft.com/
+  
+- **The Ringer**:
+  - **NBA**: https://nbadraft.theringer.com/
+  - **NFL**: https://nfldraft.theringer.com/
+  
+- **ESPN**:
+  - **NFL**: https://www.espn.com/nfl/draft/rounds/_/round/
+  - **NBA**: https://www.espn.com/nba/draft/rounds/_/round/
+  - **NHL**: https://www.espn.com/nhl
+  
+- **NBA.com**:
+  - **NBA**: https://www.nba.com/draft/
+  
+- **NBADraft.net**:
+  - **NBA**: https://www.nbadraft.net/players/
+  
+- **NBA.com**:
+  - **NHL**: https://www.nhl.com/news/
+  
+- **walterfootball.com**:
+  - **NFL**: https://walterfootball.com/scoutingreport
+  
+- **NFL.com**: 
+  - **NFL**: https://www.nfl.com/prospects/
+
+
 ## The `nfl` Dataset
 
-The `nfl` dataset includes the following datapoints:
+### Loading NFL Data
+
+To view the NFL dataset run the following code: 
+
+`nfl_data`
+
+### The data points
+
+The `nfl` data set includes the following data points:
 
 - **source**: The source of the data.
 - **name**: The name of the player.
@@ -86,16 +136,34 @@ The `nfl` dataset includes the following datapoints:
 - **scouting_report**: The scouting report.
 - **score**: Player’s score from 1-100.
 
-#Loading NFL Data
-First, let's load the NHL data provided by the package.
 
-```{r}
-head(nfl_data)
-```
 
-## The `nhl_df` Dataset
+### Filtering By Data Source  
 
-The `nhl_df` dataset includes the following datapoints:
+The NFL data has been compiled from multiple sources. The four different data sets are:
+
+- **Base (ESPN.com)**: Data from ESPN.com 
+- **The Ringer**: Data from The Ringer 
+- **ESPN**: Data from ESPN 
+- **Walter Football**: Data from Walter Football  
+
+To see the data from a specific source, use the following functions:  
+
+- **Base (ESPN.com)**: `nfl_data_base()` 
+- **The Ringer**: `nfl_data_the_ringer()` 
+- **ESPN**: `nfl_data_espn()` 
+- **Walter Football**: `nfl_data_walter_football()`
+
+## The `nhl_data` Dataset
+
+### Loading NHL Data
+
+To view the NHL dataset run the following code: `nhl_data`
+
+
+### The data points
+
+The `NFL` data set includes the following data points:
 
 - **source**: The source of the data.
 - **name**: The name of the player.
@@ -115,15 +183,10 @@ The `nhl_df` dataset includes the following datapoints:
 - **analysis**: An analysis of the player’s abilities.
 
 
-#Loading NHL Data
-First, let's load the NHL data provided by the package.
 
-```{r}
-head(nhl_data)
-```
+### Filtering By Data Source
 
-#Filtering By Data Source
-The NHL data has been compiled from multiple sources. The three different datasouces are
+The NHL data has been compiled from multiple sources. The three different data sets are
 
 - **Base (ESPN.com)**: Data from ESPN.com
 - **ESPN**: Data from ESPN
@@ -131,18 +194,21 @@ The NHL data has been compiled from multiple sources. The three different dataso
 
 To see the data from a specific source, use of the following functions:
 
-```{r}
-nhl_base_data <- nhl_data_base()
-head(nhl_base_data)
-
-nhl_data_espn()
-nhl_data_nhl.com()
-```
+- **Base (ESPN.com)**:`nhl_base_data()`
+- **ESPN**:`nhl_data_espn()`
+- **NHL.com**:`nhl_data_nhl.com()`
 
 
-## The `nba_csv` Dataset
 
-The `nba_csv` dataset includes the following datapoints:
+## The `nba_data` Dataset
+
+### Loading NHL Data
+
+To view the NHL dataset run the following code: `nba_data`
+
+### The data points
+
+The `nba_data` data set includes the following data points:
 
 - **source**: The source of the data.
 - **name**: The name of the player.
@@ -208,10 +274,20 @@ The `nba_csv` dataset includes the following datapoints:
 - **big_board_rank**: The player's big board rank.
 - **overall_rank**: The overall rank of the player.
 
+### Filtering By Data Source
 
-#Loading NBA Data
-First, let's load the NBA data provided by the package.
+The NFL data has been compiled from multiple sources. The five different data sets are:
 
-```{r}
-head(nba_data)
-```
+- **Base (ESPN.com)**: Data from ESPN.com
+- **NBA.com**: Data from NBA.com
+- **NBADraft.net**: Data from NBADraft.net
+- **The Ringer**: Data from The Ringer
+- **ESPN**: Data from ESPN
+
+To see the data from a specific source, use the following functions:
+
+- **Base (ESPN.com)**: `nfl_data_base()`
+- **NBA.com**: `nfl_data_nba_com()`
+- **NBADraft.net**: `nfl_data_nbadraft_net()`
+- **The Ringer**: `nfl_data_the_ringer()`
+- **ESPN**: `nfl_data_espn()`
