@@ -143,7 +143,7 @@ load("data/nfl_data.rda")
 #' @title NFL Data Base
 nfl_data_base <- function() {
   nfl_data |>
-    dplyr::filter(source == "Base") |>
+    dplyr::filter(source == "base") |>
     dplyr::select(name, round, rank)
 }
 
@@ -249,4 +249,4 @@ nfl_data_the_ringer <- function() {
 
                )
 }
-##WHITE NFL.com WHEN READY
+##WRITE NFL.com WHEN READY

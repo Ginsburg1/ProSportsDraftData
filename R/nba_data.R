@@ -102,47 +102,47 @@
 #'
 "nba_data"
 
-load("data/nfl_data.rda")
+load("data/nba_data.rda")
 
-#' Filter NFL Data by Source (Base)
+#' Filter NBA Data by Source (Base)
 #'
-#' Filters and selects NFL data from the Base (ESPN.com) source.
+#' Filters and selects NBA data from the Base (ESPN.com) source.
 #'
-#' @return A filtered and selected tibble of NFL data from Base.
+#' @return A filtered and selected tibble of NBA data from Base.
 #' @export
-#' @name nfl_data_base
-#' @title NFL Data Base
-nfl_data_base <- function() {
-  nfl_data |>
+#' @name nba_data_base
+#' @title NBA Data Base
+nba_data_base <- function() {
+  nba_data |>
     dplyr::filter(source == "Base") |>
-    dplyr::select(name, year, draft, round)
+    dplyr::select(name, year, round)
 }
 
-#' Filter NFL Data by Source (ESPN)
+#' Filter NBA Data by Source (ESPN)
 #'
-#' Filters and selects NFL data from ESPN for the given source value.
+#' Filters and selects NBA data from ESPN for the given source value.
 #'
-#' @return A filtered and selected tibble of NFL data from ESPN.
+#' @return A filtered and selected tibble of NBA data from ESPN.
 #' @export
-#' @name nfl_data_espn
-#' @title NFL Data ESPN
-nfl_data_espn <- function() {
-  nfl_data |>
+#' @name nba_data_espn
+#' @title NBA Data ESPN
+nba_data_espn <- function() {
+  nba_data |>
     dplyr::filter(source == "ESPN") |>
     dplyr::select(name, year, height, weight, school, college_abbreviation, pros, cons, verdict,
                   pre_draft_analysis, post_draft_analysis, ranking, player_score)
 }
 
-#' Filter NFL Data by Source (The Ringer)
+#' Filter NBA Data by Source (The Ringer)
 #'
-#' Filters and selects NFL data from The Ringer for the given source value.
+#' Filters and selects NBA data from The Ringer for the given source value.
 #'
-#' @return A filtered and selected tibble of NFL data from The Ringer.
+#' @return A filtered and selected tibble of NBA data from The Ringer.
 #' @export
-#' @name nfl_data_the_ringer
-#' @title NFL Data The Ringer
-nfl_data_the_ringer <- function() {
-  nfl_data |>
+#' @name nba_data_the_ringer
+#' @title NBA Data The Ringer
+nba_data_the_ringer <- function() {
+  nba_data |>
     dplyr::filter(source == "The Ringer") |>
     dplyr::select(name, year, position, school, grade, pts_total, pts_per40, reb_total, reb_per40,
                   ast_total, ast_per40, efg, fga, stl_total, stl_per40, blk_total, blk_per40,
@@ -150,16 +150,16 @@ nfl_data_the_ringer <- function() {
                   wingspan, standing_reach, analysis, similar_player, pros, cons)
 }
 
-#' Filter NFL Data by Source (NBADraft.net)
+#' Filter NBA Data by Source (NBADraft.net)
 #'
-#' Filters and selects NFL data from NBADraft.net for the given source value.
+#' Filters and selects NBA data from NBADraft.net for the given source value.
 #'
-#' @return A filtered and selected tibble of NFL data from NBADraft.net.
+#' @return A filtered and selected tibble of NBA data from NBADraft.net.
 #' @export
-#' @name nfl_data_nbadraft_net
-#' @title NFL Data NBADraft.net
-nfl_data_nbadraft_net <- function() {
-  nfl_data |>
+#' @name nba_data_nbadraft_net
+#' @title NBA Data NBADraft.net
+nba_data_nbadraft_net <- function() {
+  nba_data |>
     dplyr::filter(source == "NBADraft.net") |>
     dplyr::select(name, height, weight, position, school, date_of_birth, hometown, high_school,
                   international_team, athleticism, size, defense, strength, quickness, leadership,
@@ -167,17 +167,17 @@ nfl_data_nbadraft_net <- function() {
                   mock_draft_rank, big_board_rank, overall_rank, similar_player, pros, cons)
 }
 
-#' Filter NFL Data by Source (NBA.com)
+#' Filter NBA Data by Source (NBA.com)
 #'
-#' Filters and selects NFL data from NBA.com for the given source value.
+#' Filters and selects NBA data from NBA.com for the given source value.
 #'
-#' @return A filtered and selected tibble of NFL data from NBA.com.
+#' @return A filtered and selected tibble of NBA data from NBA.com.
 #' @export
-#' @name nfl_data_nba_com
-#' @title NFL Data NBA.com
-nfl_data_nba_com <- function() {
-  nfl_data |>
+#' @name nba_data_nba_com
+#' @title NBA Data NBA.com
+nba_data_nba_com <- function() {
+  nba_data |>
     dplyr::filter(source == "NBA.com") |>
-    dplyr::select(name, year, position, school, weight, grade, date_of_birth, profile, overview,
+    dplyr::select(name, year, position, school, weight, grade, date_of_birth, profile,
                   analysis, projection)
 }
