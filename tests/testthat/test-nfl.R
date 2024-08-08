@@ -17,8 +17,9 @@ test_that("nfl_data_base returns correct columns and filters by source", {
 # Test nfl_data_espn function
 test_that("nfl_data_espn returns correct columns and filters by source", {
   result <- nfl_data_espn()
-  expected_columns <- c("name", "year", "height", "weight", "position", "college",
-                        "pros", "cons", "similar_player", "summary")
+  expected_columns <- c("source", "name", "year", "height", "weight", "college",
+                        "college_abbrivation", "pre_draft", "post_draft",
+                        "position_rank", "overall_rank", "score")
   expect_true(all(expected_columns %in% colnames(result)))
 })
 

@@ -160,16 +160,18 @@ nfl_data_base <- function() {
 nfl_data_espn <- function() {
   nfl_data |>
     dplyr::filter(source == "ESPN") |>
-    dplyr::select(name,
+    dplyr::select(source,
+                  name,
                   year,
                   height,
                   weight,
-                  position,
                   college,
-                  pros,
-                  cons,
-                  similar_player,
-                  summary)
+                  college_abbrivation,
+                  pre_draft,
+                  post_draft,
+                  position_rank,
+                  overall_rank,
+                  score)
 }
 
 #' Filter NFL Data by Source (Walter Football)
@@ -251,7 +253,6 @@ nfl_data_the_ringer <- function() {
 
                )
 }
-##WRITE NFL.com WHEN READY
 #' Filter NFL Data by Source (NFL.com)
 #'
 #' Filters and selects NFL data from NFL.com for the given source value.
