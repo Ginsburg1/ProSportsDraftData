@@ -45,7 +45,7 @@ nhl_2023 <- dplyr::filter(nhl_data, year == 2023)
 head(nhl_2023)
 
 # Filter the data to include only ESPN as the source
-nhl_data_espn <- nhl_data |>
+nhl_data |>
   dplyr::filter(source == "ESPN")
 
 }

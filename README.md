@@ -18,3 +18,7 @@ You can install the development version of ProSportsDraftData like so:
 ``` r
 devtools::install_github("Ginsburg1/ProSportsDraftData")
 ```
+
+## Overview
+
+`ProSportsDraftData` includes draft data from multiple sources for the NFL (`nfl_data`), NBA (`nba_data`), and NHL (`nhl_data`), covering a wide range of variables. This package is designed to facilitate analysis and comparison of draft data across these major sports leagues.

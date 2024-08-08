@@ -75,9 +75,11 @@ data(nfl_data)
 # View the first few rows
 head(nfl_data)
 
-# Filter data for a specific year
-nfl_2023 <- dplyr::filter(nfl_data, year == 2023)
+# Filter data for NFL.com source
+nfl_com_data <- nfl_data[nfl_data$source == "NFL.com", ]
 
+# Filter data for The Ringer source
+the_ringer_data <- nfl_data[nfl_data$source == "The Ringer", ]
 
 }
 \keyword{datasets}

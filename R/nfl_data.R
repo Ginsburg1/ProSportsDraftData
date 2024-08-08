@@ -66,9 +66,11 @@
 #' # View the first few rows
 #' head(nfl_data)
 #'
-#' # Filter data for a specific year
-#' nfl_2023 <- dplyr::filter(nfl_data, year == 2023)
+#' # Filter data for NFL.com source
+#' nfl_com_data <- nfl_data[nfl_data$source == "NFL.com", ]
 #'
+#' # Filter data for The Ringer source
+#' the_ringer_data <- nfl_data[nfl_data$source == "The Ringer", ]
 #'
 "nfl_data"
 
@@ -250,3 +252,26 @@ nfl_data_the_ringer <- function() {
                )
 }
 ##WRITE NFL.com WHEN READY
+#' Filter NFL Data by Source (NFL.com)
+#'
+#' Filters and selects NFL data from NFL.com for the given source value.
+#'
+#' @return A filtered and selected tibble of NFL data from NFL.com.
+#' @export
+#' @name nfl_data_nfl_com
+#' @title NFL Data NFL.com
+nfl_data_nfl_com <- function() {
+  nfl_data |>
+    dplyr::filter(source == "NFL.com") |>
+    dplyr::select(name,
+                  year,
+                  height,
+                  weight,
+                  position,
+                  college,
+                  pros,
+                  cons,
+                  similar_player,
+                  summary
+    )
+}
