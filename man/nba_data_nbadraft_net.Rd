@@ -3,6 +3,38 @@
 \name{nba_data_nbadraft_net}
 \alias{nba_data_nbadraft_net}
 \title{NBA Data NBADraft.net}
+\format{
+A \code{tibble} with the following columns:
+\describe{
+  \item{\code{name}}{The name of the player.}
+  \item{\code{height}}{The height of the player.}
+  \item{\code{weight}}{The weight of the player.}
+  \item{\code{position}}{The position the player plays.}
+  \item{\code{school}}{The school the player attended.}
+  \item{\code{date_of_birth}}{The date of birth of the player.}
+  \item{\code{hometown}}{The hometown of the player.}
+  \item{\code{high_school}}{The high school the player attended.}
+  \item{\code{international_team}}{The international team the player has been part of.}
+  \item{\code{athleticism}}{Evaluation of the player's athleticism.}
+  \item{\code{size}}{Evaluation of the player's size.}
+  \item{\code{defense}}{Evaluation of the player's defensive skills.}
+  \item{\code{strength}}{Evaluation of the player's strength.}
+  \item{\code{quickness}}{Evaluation of the player's quickness.}
+  \item{\code{leadership}}{Evaluation of the player's leadership skills.}
+  \item{\code{jumpshot}}{Evaluation of the player's jumpshot.}
+  \item{\code{nba_ready}}{Evaluation of the player's NBA readiness.}
+  \item{\code{rebounding}}{Evaluation of the player's rebounding skills.}
+  \item{\code{potential}}{Evaluation of the player's potential.}
+  \item{\code{post_skills}}{Evaluation of the player's post skills.}
+  \item{\code{intangibles}}{Evaluation of the player's intangibles.}
+  \item{\code{mock_draft_rank}}{The player's ranking in mock drafts.}
+  \item{\code{big_board_rank}}{The player's ranking on big boards.}
+  \item{\code{overall_rank}}{The player's overall ranking.}
+  \item{\code{similar_player}}{A player with a similar profile.}
+  \item{\code{pros}}{The pros of the player's abilities.}
+  \item{\code{cons}}{The cons of the player's abilities.}
+}
+}
 \usage{
 nba_data_nbadraft_net()
 }

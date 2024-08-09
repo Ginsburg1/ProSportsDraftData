@@ -3,6 +3,14 @@
 \name{nhl_data_base}
 \alias{nhl_data_base}
 \title{NHL Data Base}
+\format{
+A \code{tibble} with the following columns:
+\describe{
+  \item{\code{name}}{The name of the player.}
+  \item{\code{round}}{The round in which the player was drafted.}
+  \item{\code{rank}}{The rank of the player in the draft.}
+}
+}
 \usage{
 nhl_data_base()
 }

@@ -3,6 +3,44 @@
 \name{nba_data_the_ringer}
 \alias{nba_data_the_ringer}
 \title{NBA Data The Ringer}
+\format{
+A \code{tibble} with the following columns:
+\describe{
+  \item{\code{name}}{The name of the player.}
+  \item{\code{year}}{The year of the draft.}
+  \item{\code{position}}{The position the player plays.}
+  \item{\code{school}}{The school the player attended.}
+  \item{\code{grade}}{The grade given to the player.}
+  \item{\code{pts_total}}{Total points scored by the player.}
+  \item{\code{pts_per40}}{Points per 40 minutes played.}
+  \item{\code{reb_total}}{Total rebounds by the player.}
+  \item{\code{reb_per40}}{Rebounds per 40 minutes played.}
+  \item{\code{ast_total}}{Total assists by the player.}
+  \item{\code{ast_per40}}{Assists per 40 minutes played.}
+  \item{\code{efg}}{Effective field goal percentage.}
+  \item{\code{fga}}{Field goal attempts.}
+  \item{\code{stl_total}}{Total steals by the player.}
+  \item{\code{stl_per40}}{Steals per 40 minutes played.}
+  \item{\code{blk_total}}{Total blocks by the player.}
+  \item{\code{blk_per40}}{Blocks per 40 minutes played.}
+  \item{\code{tpt}}{Three-point shots made.}
+  \item{\code{tpa}}{Three-point attempts.}
+  \item{\code{ft}}{Free throws made.}
+  \item{\code{fta}}{Free throw attempts.}
+  \item{\code{ts}}{True shooting percentage.}
+  \item{\code{ts_att}}{True shooting attempts.}
+  \item{\code{main_selling_point}}{The main selling point of the player.}
+  \item{\code{age}}{The age of the player at the time of the draft.}
+  \item{\code{height}}{The height of the player.}
+  \item{\code{weight}}{The weight of the player.}
+  \item{\code{wingspan}}{The wingspan of the player.}
+  \item{\code{standing_reach}}{The standing reach of the player.}
+  \item{\code{analysis}}{An analysis of the player's potential and performance.}
+  \item{\code{similar_player}}{A player with a similar profile.}
+  \item{\code{pros}}{The pros of the player's abilities.}
+  \item{\code{cons}}{The cons of the player's abilities.}
+}
+}
 \usage{
 nba_data_the_ringer()
 }

@@ -108,6 +108,14 @@ load("data/nba_data.rda")
 #'
 #' Filters and selects NBA data from the Base (ESPN.com) source.
 #'
+#' @format A \code{tibble} with the following columns:
+#' \describe{
+#'   \item{\code{name}}{The name of the player.}
+#'   \item{\code{year}}{The year of the draft.}
+#'   \item{\code{round}}{The round in which the player was drafted.}
+#' }
+
+#'
 #' @return A filtered and selected tibble of NBA data from Base.
 #' @export
 #' @name nba_data_base
@@ -121,6 +129,24 @@ nba_data_base <- function() {
 #' Filter NBA Data by Source (ESPN)
 #'
 #' Filters and selects NBA data from ESPN for the given source value.
+#'
+#' @format A \code{tibble} with the following columns:
+#' \describe{
+#'   \item{\code{name}}{The name of the player.}
+#'   \item{\code{year}}{The year of the draft.}
+#'   \item{\code{height}}{The height of the player.}
+#'   \item{\code{weight}}{The weight of the player.}
+#'   \item{\code{school}}{The school the player attended.}
+#'   \item{\code{college_abbreviation}}{The abbreviation of the college the player attended.}
+#'   \item{\code{pros}}{The pros of the player's abilities.}
+#'   \item{\code{cons}}{The cons of the player's abilities.}
+#'   \item{\code{verdict}}{The overall verdict on the player's potential.}
+#'   \item{\code{pre_draft_analysis}}{Analysis of the player before the draft.}
+#'   \item{\code{post_draft_analysis}}{Analysis of the player after the draft.}
+#'   \item{\code{ranking}}{The player's ranking.}
+#'   \item{\code{player_score}}{The score given to the player.}
+#' }
+
 #'
 #' @return A filtered and selected tibble of NBA data from ESPN.
 #' @export
@@ -136,6 +162,44 @@ nba_data_espn <- function() {
 #' Filter NBA Data by Source (The Ringer)
 #'
 #' Filters and selects NBA data from The Ringer for the given source value.
+#'
+#' @format A \code{tibble} with the following columns:
+#' \describe{
+#'   \item{\code{name}}{The name of the player.}
+#'   \item{\code{year}}{The year of the draft.}
+#'   \item{\code{position}}{The position the player plays.}
+#'   \item{\code{school}}{The school the player attended.}
+#'   \item{\code{grade}}{The grade given to the player.}
+#'   \item{\code{pts_total}}{Total points scored by the player.}
+#'   \item{\code{pts_per40}}{Points per 40 minutes played.}
+#'   \item{\code{reb_total}}{Total rebounds by the player.}
+#'   \item{\code{reb_per40}}{Rebounds per 40 minutes played.}
+#'   \item{\code{ast_total}}{Total assists by the player.}
+#'   \item{\code{ast_per40}}{Assists per 40 minutes played.}
+#'   \item{\code{efg}}{Effective field goal percentage.}
+#'   \item{\code{fga}}{Field goal attempts.}
+#'   \item{\code{stl_total}}{Total steals by the player.}
+#'   \item{\code{stl_per40}}{Steals per 40 minutes played.}
+#'   \item{\code{blk_total}}{Total blocks by the player.}
+#'   \item{\code{blk_per40}}{Blocks per 40 minutes played.}
+#'   \item{\code{tpt}}{Three-point shots made.}
+#'   \item{\code{tpa}}{Three-point attempts.}
+#'   \item{\code{ft}}{Free throws made.}
+#'   \item{\code{fta}}{Free throw attempts.}
+#'   \item{\code{ts}}{True shooting percentage.}
+#'   \item{\code{ts_att}}{True shooting attempts.}
+#'   \item{\code{main_selling_point}}{The main selling point of the player.}
+#'   \item{\code{age}}{The age of the player at the time of the draft.}
+#'   \item{\code{height}}{The height of the player.}
+#'   \item{\code{weight}}{The weight of the player.}
+#'   \item{\code{wingspan}}{The wingspan of the player.}
+#'   \item{\code{standing_reach}}{The standing reach of the player.}
+#'   \item{\code{analysis}}{An analysis of the player's potential and performance.}
+#'   \item{\code{similar_player}}{A player with a similar profile.}
+#'   \item{\code{pros}}{The pros of the player's abilities.}
+#'   \item{\code{cons}}{The cons of the player's abilities.}
+#' }
+
 #'
 #' @return A filtered and selected tibble of NBA data from The Ringer.
 #' @export
@@ -154,6 +218,38 @@ nba_data_the_ringer <- function() {
 #'
 #' Filters and selects NBA data from NBADraft.net for the given source value.
 #'
+#' @format A \code{tibble} with the following columns:
+#' \describe{
+#'   \item{\code{name}}{The name of the player.}
+#'   \item{\code{height}}{The height of the player.}
+#'   \item{\code{weight}}{The weight of the player.}
+#'   \item{\code{position}}{The position the player plays.}
+#'   \item{\code{school}}{The school the player attended.}
+#'   \item{\code{date_of_birth}}{The date of birth of the player.}
+#'   \item{\code{hometown}}{The hometown of the player.}
+#'   \item{\code{high_school}}{The high school the player attended.}
+#'   \item{\code{international_team}}{The international team the player has been part of.}
+#'   \item{\code{athleticism}}{Evaluation of the player's athleticism.}
+#'   \item{\code{size}}{Evaluation of the player's size.}
+#'   \item{\code{defense}}{Evaluation of the player's defensive skills.}
+#'   \item{\code{strength}}{Evaluation of the player's strength.}
+#'   \item{\code{quickness}}{Evaluation of the player's quickness.}
+#'   \item{\code{leadership}}{Evaluation of the player's leadership skills.}
+#'   \item{\code{jumpshot}}{Evaluation of the player's jumpshot.}
+#'   \item{\code{nba_ready}}{Evaluation of the player's NBA readiness.}
+#'   \item{\code{rebounding}}{Evaluation of the player's rebounding skills.}
+#'   \item{\code{potential}}{Evaluation of the player's potential.}
+#'   \item{\code{post_skills}}{Evaluation of the player's post skills.}
+#'   \item{\code{intangibles}}{Evaluation of the player's intangibles.}
+#'   \item{\code{mock_draft_rank}}{The player's ranking in mock drafts.}
+#'   \item{\code{big_board_rank}}{The player's ranking on big boards.}
+#'   \item{\code{overall_rank}}{The player's overall ranking.}
+#'   \item{\code{similar_player}}{A player with a similar profile.}
+#'   \item{\code{pros}}{The pros of the player's abilities.}
+#'   \item{\code{cons}}{The cons of the player's abilities.}
+#' }
+
+#'
 #' @return A filtered and selected tibble of NBA data from NBADraft.net.
 #' @export
 #' @name nba_data_nbadraft_net
@@ -170,6 +266,21 @@ nba_data_nbadraft_net <- function() {
 #' Filter NBA Data by Source (NBA.com)
 #'
 #' Filters and selects NBA data from NBA.com for the given source value.
+#'
+#' @format A \code{tibble} with the following columns:
+#' \describe{
+#'   \item{\code{name}}{The name of the player.}
+#'   \item{\code{year}}{The year of the draft.}
+#'   \item{\code{position}}{The position the player plays.}
+#'   \item{\code{school}}{The school the player attended.}
+#'   \item{\code{weight}}{The weight of the player.}
+#'   \item{\code{grade}}{The grade given to the player.}
+#'   \item{\code{date_of_birth}}{The date of birth of the player.}
+#'   \item{\code{profile}}{Profile description of the player.}
+#'   \item{\code{analysis}}{An analysis of the player's potential and performance.}
+#'   \item{\code{projection}}{Projection of the player's future performance.}
+#' }
+
 #'
 #' @return A filtered and selected tibble of NBA data from NBA.com.
 #' @export

@@ -3,6 +3,24 @@
 \name{nba_data_espn}
 \alias{nba_data_espn}
 \title{NBA Data ESPN}
+\format{
+A \code{tibble} with the following columns:
+\describe{
+  \item{\code{name}}{The name of the player.}
+  \item{\code{year}}{The year of the draft.}
+  \item{\code{height}}{The height of the player.}
+  \item{\code{weight}}{The weight of the player.}
+  \item{\code{school}}{The school the player attended.}
+  \item{\code{college_abbreviation}}{The abbreviation of the college the player attended.}
+  \item{\code{pros}}{The pros of the player's abilities.}
+  \item{\code{cons}}{The cons of the player's abilities.}
+  \item{\code{verdict}}{The overall verdict on the player's potential.}
+  \item{\code{pre_draft_analysis}}{Analysis of the player before the draft.}
+  \item{\code{post_draft_analysis}}{Analysis of the player after the draft.}
+  \item{\code{ranking}}{The player's ranking.}
+  \item{\code{player_score}}{The score given to the player.}
+}
+}
 \usage{
 nba_data_espn()
 }

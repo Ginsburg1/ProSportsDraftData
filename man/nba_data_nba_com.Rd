@@ -3,6 +3,21 @@
 \name{nba_data_nba_com}
 \alias{nba_data_nba_com}
 \title{NBA Data NBA.com}
+\format{
+A \code{tibble} with the following columns:
+\describe{
+  \item{\code{name}}{The name of the player.}
+  \item{\code{year}}{The year of the draft.}
+  \item{\code{position}}{The position the player plays.}
+  \item{\code{school}}{The school the player attended.}
+  \item{\code{weight}}{The weight of the player.}
+  \item{\code{grade}}{The grade given to the player.}
+  \item{\code{date_of_birth}}{The date of birth of the player.}
+  \item{\code{profile}}{Profile description of the player.}
+  \item{\code{analysis}}{An analysis of the player's potential and performance.}
+  \item{\code{projection}}{Projection of the player's future performance.}
+}
+}
 \usage{
 nba_data_nba_com()
 }

@@ -3,6 +3,14 @@
 \name{nba_data_base}
 \alias{nba_data_base}
 \title{NBA Data Base}
+\format{
+A \code{tibble} with the following columns:
+\describe{
+  \item{\code{name}}{The name of the player.}
+  \item{\code{year}}{The year of the draft.}
+  \item{\code{round}}{The round in which the player was drafted.}
+}
+}
 \usage{
 nba_data_base()
 }

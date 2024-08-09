@@ -3,6 +3,20 @@
 \name{nhl_data_espn}
 \alias{nhl_data_espn}
 \title{NHL Data ESPN}
+\format{
+A \code{tibble} with the following columns:
+\describe{
+  \item{\code{name}}{The name of the player.}
+  \item{\code{year}}{The year of the draft.}
+  \item{\code{date_of_birth}}{The date of birth of the player.}
+  \item{\code{age}}{The age of the player at the time of the draft.}
+  \item{\code{current_team}}{The current team of the player.}
+  \item{\code{league}}{The league the player was playing in before the draft.}
+  \item{\code{scouting_report}}{A scouting report of the player.}
+  \item{\code{team_fit}}{How well the player fits with the drafting team.}
+  \item{\code{likely_to_play}}{The likelihood of the player playing in the NHL.}
+}
+}
 \usage{
 nhl_data_espn()
 }

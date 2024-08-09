@@ -65,6 +65,13 @@ load("data/nhl_data.rda")
 #'
 #' Filters and selects NHL data from the base source for the given source value.
 #'
+#' @format A \code{tibble} with the following columns:
+#' \describe{
+#'   \item{\code{name}}{The name of the player.}
+#'   \item{\code{round}}{The round in which the player was drafted.}
+#'   \item{\code{rank}}{The rank of the player in the draft.}
+#' }
+#'
 #'
 #' @return A filtered and selected tibble of NHL data.
 #' @export
@@ -79,6 +86,20 @@ nhl_data_base <- function() {
 #' Filter NHL Data by Source (ESPN)
 #'
 #' Filters and selects NHL data from ESPN for the given source value.
+#'
+#' @format A \code{tibble} with the following columns:
+#' \describe{
+#'   \item{\code{name}}{The name of the player.}
+#'   \item{\code{year}}{The year of the draft.}
+#'   \item{\code{date_of_birth}}{The date of birth of the player.}
+#'   \item{\code{age}}{The age of the player at the time of the draft.}
+#'   \item{\code{current_team}}{The current team of the player.}
+#'   \item{\code{league}}{The league the player was playing in before the draft.}
+#'   \item{\code{scouting_report}}{A scouting report of the player.}
+#'   \item{\code{team_fit}}{How well the player fits with the drafting team.}
+#'   \item{\code{likely_to_play}}{The likelihood of the player playing in the NHL.}
+#' }
+
 #'
 #' @return A filtered and selected tibble of NHL data from ESPN.
 #' @export
@@ -101,6 +122,19 @@ nhl_data_espn <- function() {
 #' Filter NHL Data by Source (NHL.com)
 #'
 #' Filters and selects NHL data from NHL.com for the given source value.
+#'
+#' @format A \code{tibble} with the following columns:
+#' \describe{
+#'   \item{\code{name}}{The name of the player.}
+#'   \item{\code{year}}{The year of the draft.}
+#'   \item{\code{position}}{The position the player plays.}
+#'   \item{\code{city}}{The city associated with the player or team.}
+#'   \item{\code{team}}{The team that selected the player.}
+#'   \item{\code{league}}{The league the player was playing in before the draft.}
+#'   \item{\code{scouting_report}}{A scouting report of the player.}
+#'   \item{\code{analysis}}{An analysis of the player's potential and performance.}
+#' }
+
 #'
 #' @return A filtered and selected tibble of NHL data from NHL.com.
 #' @export

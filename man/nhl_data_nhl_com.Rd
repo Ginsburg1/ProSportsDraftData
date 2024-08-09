@@ -4,6 +4,19 @@
 \alias{nhl_data_nhl_com}
 \alias{nhl_data_nhl.com}
 \title{NHL Data NHL.com}
+\format{
+A \code{tibble} with the following columns:
+\describe{
+  \item{\code{name}}{The name of the player.}
+  \item{\code{year}}{The year of the draft.}
+  \item{\code{position}}{The position the player plays.}
+  \item{\code{city}}{The city associated with the player or team.}
+  \item{\code{team}}{The team that selected the player.}
+  \item{\code{league}}{The league the player was playing in before the draft.}
+  \item{\code{scouting_report}}{A scouting report of the player.}
+  \item{\code{analysis}}{An analysis of the player's potential and performance.}
+}
+}
 \usage{
 nhl_data_nhl.com()
 }
