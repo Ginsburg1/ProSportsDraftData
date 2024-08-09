@@ -3,6 +3,21 @@
 \name{nfl_data_nfl_com}
 \alias{nfl_data_nfl_com}
 \title{NFL Data NFL.com}
+\format{
+A \code{tibble} with the following columns:
+\describe{
+  \item{\code{name}}{The name of the player.}
+  \item{\code{year}}{The draft year of the player.}
+  \item{\code{height}}{The height of the player.}
+  \item{\code{weight}}{The weight of the player.}
+  \item{\code{position}}{The position of the player.}
+  \item{\code{college}}{The college the player attended.}
+  \item{\code{pros}}{The pros of the player's abilities.}
+  \item{\code{cons}}{The cons of the player's abilities.}
+  \item{\code{similar_player}}{A similar player for comparison.}
+  \item{\code{summary}}{A summary of the player's abilities.}
+}
+}
 \usage{
 nfl_data_nfl_com()
 }

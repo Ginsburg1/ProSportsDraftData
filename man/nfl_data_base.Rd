@@ -3,6 +3,14 @@
 \name{nfl_data_base}
 \alias{nfl_data_base}
 \title{NFL Data Base}
+\format{
+A \code{tibble} with the following columns:
+\describe{
+  \item{\code{name}}{The name of the player.}
+  \item{\code{round}}{The round in which the player was drafted.}
+  \item{\code{rank}}{The rank of the player.}
+}
+}
 \usage{
 nfl_data_base()
 }

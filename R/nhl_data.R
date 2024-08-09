@@ -65,6 +65,7 @@ load("data/nhl_data.rda")
 #'
 #' Filters and selects NHL data from the base source for the given source value.
 #'
+#'
 #' @return A filtered and selected tibble of NHL data.
 #' @export
 #' @name nhl_data_base

@@ -3,6 +3,31 @@
 \name{nfl_data_walter_football}
 \alias{nfl_data_walter_football}
 \title{NFL Data Walter Football}
+\format{
+A \code{tibble} with the following columns:
+\describe{
+  \item{\code{name}}{The name of the player.}
+  \item{\code{year}}{The draft year of the player.}
+  \item{\code{height}}{The height of the player.}
+  \item{\code{weight}}{The weight of the player.}
+  \item{\code{arm_length}}{The arm length of the player.}
+  \item{\code{hand_length}}{The hand length of the player.}
+  \item{\code{next_gen_production_score}}{The Next Gen production score.}
+  \item{\code{next_gen_athleticism_score}}{The Next Gen athleticism score.}
+  \item{\code{forty_yard_dash}}{The forty-yard dash time.}
+  \item{\code{vertical_jump}}{The vertical jump height.}
+  \item{\code{nfl_prospect_grade}}{The NFL prospect grade.}
+  \item{\code{home_town}}{The hometown of the player.}
+  \item{\code{broad_jump}}{The broad jump distance.}
+  \item{\code{three_cone_drill}}{The three-cone drill time.}
+  \item{\code{twenty_yard_shuttle}}{The twenty-yard shuttle time.}
+  \item{\code{bench_press}}{The bench press reps.}
+  \item{\code{similar_player}}{A similar player for comparison.}
+  \item{\code{summary}}{A summary of the player's abilities.}
+  \item{\code{pros}}{The pros of the player's abilities.}
+  \item{\code{cons}}{The cons of the player's abilities.}
+}
+}
 \usage{
 nfl_data_walter_football()
 }

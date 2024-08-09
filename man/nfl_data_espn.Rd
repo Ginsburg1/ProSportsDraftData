@@ -3,6 +3,23 @@
 \name{nfl_data_espn}
 \alias{nfl_data_espn}
 \title{NFL Data ESPN}
+\format{
+A \code{tibble} with the following columns:
+\describe{
+  \item{\code{source}}{The source of the data.}
+  \item{\code{name}}{The name of the player.}
+  \item{\code{year}}{The year of the draft.}
+  \item{\code{height}}{The height of the player.}
+  \item{\code{weight}}{The weight of the player.}
+  \item{\code{college}}{The college the player attended.}
+  \item{\code{college_abbrivation}}{The abbreviation of the college.}
+  \item{\code{pre_draft}}{Pre-draft information.}
+  \item{\code{post_draft}}{Post-draft information.}
+  \item{\code{position_rank}}{The position rank of the player.}
+  \item{\code{overall_rank}}{The overall rank of the player.}
+  \item{\code{score}}{The player's score from 1-100.}
+}
+}
 \usage{
 nfl_data_espn()
 }

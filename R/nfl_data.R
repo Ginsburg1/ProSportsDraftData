@@ -17,7 +17,6 @@
 #'   \item{\code{pros}}{The pros of the player's abilities.}
 #'   \item{\code{cons}}{The cons of the player's abilities.}
 #'   \item{\code{similar_player}}{A similar player for comparison.}
-#'   \item{\code{similar_player_bio}}{Simular player compairson.}
 #'   \item{\code{summary}}{A summary of the player's abilities.}
 #'   \item{\code{arm_length}}{The arm length of the player.}
 #'   \item{\code{hand_length}}{The hand length of the player.}
@@ -89,7 +88,6 @@ nfl_data <- tibble::tibble(
   pros = character(),
   cons = character(),
   similar_player = character(),
-  similar_player_bio = character(),
   summary = character(),
   arm_length = character(),
   hand_length = character(),
@@ -139,6 +137,14 @@ load("data/nfl_data.rda")
 #'
 #' Filters and selects NFL data from the base source for the given source value.
 #'
+#'
+#' @format A \code{tibble} with the following columns:
+#' \describe{
+#'   \item{\code{name}}{The name of the player.}
+#'   \item{\code{round}}{The round in which the player was drafted.}
+#'   \item{\code{rank}}{The rank of the player.}
+#' }
+#'
 #' @return A filtered and selected tibble of NFL data.
 #' @export
 #' @name nfl_data_base
@@ -152,6 +158,23 @@ nfl_data_base <- function() {
 #' Filter NFL Data by Source (ESPN)
 #'
 #' Filters and selects NFL data from ESPN for the given source value.
+#'
+#' @format A \code{tibble} with the following columns:
+#' \describe{
+#'   \item{\code{source}}{The source of the data.}
+#'   \item{\code{name}}{The name of the player.}
+#'   \item{\code{year}}{The year of the draft.}
+#'   \item{\code{height}}{The height of the player.}
+#'   \item{\code{weight}}{The weight of the player.}
+#'   \item{\code{college}}{The college the player attended.}
+#'   \item{\code{college_abbrivation}}{The abbreviation of the college.}
+#'   \item{\code{pre_draft}}{Pre-draft information.}
+#'   \item{\code{post_draft}}{Post-draft information.}
+#'   \item{\code{position_rank}}{The position rank of the player.}
+#'   \item{\code{overall_rank}}{The overall rank of the player.}
+#'   \item{\code{score}}{The player's score from 1-100.}
+#' }
+#'
 #'
 #' @return A filtered and selected tibble of NFL data from ESPN.
 #' @export
@@ -177,6 +200,31 @@ nfl_data_espn <- function() {
 #' Filter NFL Data by Source (Walter Football)
 #'
 #' Filters and selects NFL data from Walter Football for the given source value.
+#'
+#' @format A \code{tibble} with the following columns:
+#' \describe{
+#'   \item{\code{name}}{The name of the player.}
+#'   \item{\code{year}}{The draft year of the player.}
+#'   \item{\code{height}}{The height of the player.}
+#'   \item{\code{weight}}{The weight of the player.}
+#'   \item{\code{arm_length}}{The arm length of the player.}
+#'   \item{\code{hand_length}}{The hand length of the player.}
+#'   \item{\code{next_gen_production_score}}{The Next Gen production score.}
+#'   \item{\code{next_gen_athleticism_score}}{The Next Gen athleticism score.}
+#'   \item{\code{forty_yard_dash}}{The forty-yard dash time.}
+#'   \item{\code{vertical_jump}}{The vertical jump height.}
+#'   \item{\code{nfl_prospect_grade}}{The NFL prospect grade.}
+#'   \item{\code{home_town}}{The hometown of the player.}
+#'   \item{\code{broad_jump}}{The broad jump distance.}
+#'   \item{\code{three_cone_drill}}{The three-cone drill time.}
+#'   \item{\code{twenty_yard_shuttle}}{The twenty-yard shuttle time.}
+#'   \item{\code{bench_press}}{The bench press reps.}
+#'   \item{\code{similar_player}}{A similar player for comparison.}
+#'   \item{\code{summary}}{A summary of the player's abilities.}
+#'   \item{\code{pros}}{The pros of the player's abilities.}
+#'   \item{\code{cons}}{The cons of the player's abilities.}
+#' }
+#'
 #'
 #' @return A filtered and selected tibble of NFL data from Walter Football.
 #' @export
@@ -210,6 +258,41 @@ nfl_data_walter_football <- function() {
 #' Filter NFL Data by Source (The Ringer)
 #'
 #' Filters and selects NFL data from The Ringer for the given source value.
+#'
+#' @format A \code{tibble} with the following columns:
+#' \describe{
+#'   \item{\code{name}}{The name of the player.}
+#'   \item{\code{rank}}{The rank of the player.}
+#'   \item{\code{year}}{The draft year of the player.}
+#'   \item{\code{position}}{The position of the player.}
+#'   \item{\code{school}}{The school the player attended.}
+#'   \item{\code{grade}}{The grade of the player.}
+#'   \item{\code{yds}}{The number of yards the player ran.}
+#'   \item{\code{ypa}}{The yards per attempt.}
+#'   \item{\code{ypr}}{The yards per reception.}
+#'   \item{\code{tds}}{The number of touchdowns by the player.}
+#'   \item{\code{ints}}{The number of interceptions.}
+#'   \item{\code{rtg}}{The rating of the player.}
+#'   \item{\code{tkls}}{The number of tackles by the player.}
+#'   \item{\code{tfl}}{The number of tackles for loss.}
+#'   \item{\code{ypc}}{The yards per carry.}
+#'   \item{\code{pbu}}{The number of pass break-ups by the player.}
+#'   \item{\code{twenty_plus}}{The number of plays of twenty or more yards.}
+#'   \item{\code{sacks}}{The number of sacks by the player.}
+#'   \item{\code{gms}}{The number of games played.}
+#'   \item{\code{strts}}{The number of games started.}
+#'   \item{\code{sk_all}}{The number of sacks allowed by the player.}
+#'   \item{\code{height}}{The height of the player.}
+#'   \item{\code{weight}}{The weight of the player.}
+#'   \item{\code{age}}{The age of the player.}
+#'   \item{\code{main_selling_point}}{The main selling point of the player.}
+#'   \item{\code{description}}{A description of the player.}
+#'   \item{\code{similar_player}}{A similar player for comparison.}
+#'   \item{\code{scouting_report}}{The scouting report of the player.}
+#'   \item{\code{pros}}{The pros of the player's abilities.}
+#'   \item{\code{cons}}{The cons of the player's abilities.}
+#' }
+#'
 #'
 #' @return A filtered and selected tibble of NFL data from The Ringer.
 #' @export
@@ -247,15 +330,26 @@ nfl_data_the_ringer <- function() {
                   similar_player,
                   scouting_report,
                   pros,
-                  cons
-                  #,
-               #   similar_player_bio
-
-               )
+                  cons)
 }
 #' Filter NFL Data by Source (NFL.com)
 #'
 #' Filters and selects NFL data from NFL.com for the given source value.
+#'
+#' @format A \code{tibble} with the following columns:
+#' \describe{
+#'   \item{\code{name}}{The name of the player.}
+#'   \item{\code{year}}{The draft year of the player.}
+#'   \item{\code{height}}{The height of the player.}
+#'   \item{\code{weight}}{The weight of the player.}
+#'   \item{\code{position}}{The position of the player.}
+#'   \item{\code{college}}{The college the player attended.}
+#'   \item{\code{pros}}{The pros of the player's abilities.}
+#'   \item{\code{cons}}{The cons of the player's abilities.}
+#'   \item{\code{similar_player}}{A similar player for comparison.}
+#'   \item{\code{summary}}{A summary of the player's abilities.}
+#' }
+#'
 #'
 #' @return A filtered and selected tibble of NFL data from NFL.com.
 #' @export

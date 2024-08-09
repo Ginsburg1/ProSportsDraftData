@@ -3,6 +3,41 @@
 \name{nfl_data_the_ringer}
 \alias{nfl_data_the_ringer}
 \title{NFL Data The Ringer}
+\format{
+A \code{tibble} with the following columns:
+\describe{
+  \item{\code{name}}{The name of the player.}
+  \item{\code{rank}}{The rank of the player.}
+  \item{\code{year}}{The draft year of the player.}
+  \item{\code{position}}{The position of the player.}
+  \item{\code{school}}{The school the player attended.}
+  \item{\code{grade}}{The grade of the player.}
+  \item{\code{yds}}{The number of yards the player ran.}
+  \item{\code{ypa}}{The yards per attempt.}
+  \item{\code{ypr}}{The yards per reception.}
+  \item{\code{tds}}{The number of touchdowns by the player.}
+  \item{\code{ints}}{The number of interceptions.}
+  \item{\code{rtg}}{The rating of the player.}
+  \item{\code{tkls}}{The number of tackles by the player.}
+  \item{\code{tfl}}{The number of tackles for loss.}
+  \item{\code{ypc}}{The yards per carry.}
+  \item{\code{pbu}}{The number of pass break-ups by the player.}
+  \item{\code{twenty_plus}}{The number of plays of twenty or more yards.}
+  \item{\code{sacks}}{The number of sacks by the player.}
+  \item{\code{gms}}{The number of games played.}
+  \item{\code{strts}}{The number of games started.}
+  \item{\code{sk_all}}{The number of sacks allowed by the player.}
+  \item{\code{height}}{The height of the player.}
+  \item{\code{weight}}{The weight of the player.}
+  \item{\code{age}}{The age of the player.}
+  \item{\code{main_selling_point}}{The main selling point of the player.}
+  \item{\code{description}}{A description of the player.}
+  \item{\code{similar_player}}{A similar player for comparison.}
+  \item{\code{scouting_report}}{The scouting report of the player.}
+  \item{\code{pros}}{The pros of the player's abilities.}
+  \item{\code{cons}}{The cons of the player's abilities.}
+}
+}
 \usage{
 nfl_data_the_ringer()
 }

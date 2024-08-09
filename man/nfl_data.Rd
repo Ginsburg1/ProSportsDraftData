@@ -19,7 +19,6 @@ A \code{tibble} with the following columns:
   \item{\code{pros}}{The pros of the player's abilities.}
   \item{\code{cons}}{The cons of the player's abilities.}
   \item{\code{similar_player}}{A similar player for comparison.}
-  \item{\code{similar_player_bio}}{Simular player compairson.}
   \item{\code{summary}}{A summary of the player's abilities.}
   \item{\code{arm_length}}{The arm length of the player.}
   \item{\code{hand_length}}{The hand length of the player.}
