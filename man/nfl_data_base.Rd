@@ -23,3 +23,11 @@ Filter NFL Data by Source (Base)
 \details{
 Filters and selects NFL data from the base source for the given source value.
 }
+\examples{
+# Filter NFL data for base source
+base_data <- nfl_data_base()
+
+# View the first few rows
+head(base_data)
+
+}

@@ -29,3 +29,10 @@ Filter NHL Data by Source (NHL.com)
 \details{
 Filters and selects NHL data from NHL.com for the given source value.
 }
+\examples{
+# Filter NHL data for nhl.com
+nhl_com_data <- nhl_data_nhl.com()
+
+# View the first few rows
+head(nhl_com_data)
+}

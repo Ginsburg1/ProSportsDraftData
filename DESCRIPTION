@@ -2,10 +2,11 @@ Package: ProSportsDraftData
 Type: Package
 Title: Professional Sports Draft Data
 Version: 0.1.0
-Author: Benjamin Ginsburg
+Author: Benjamin Ginsburg [aut, cre]
 Maintainer: Benjamin Ginsburg <benjamin.ginsburg@du.edu>
-Description: Shows Draft Data from different sources in the NFL, NBA, and NHL.
+Description: Provides draft data from various sources for professional sports leagues, including the NFL, NBA, and NHL.
 License: GPL-3
+Authors@R: person("Benjamin", "Ginsburg", email = "benjamin.ginsburg@du.edu", role = c("aut", "cre"))
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.2

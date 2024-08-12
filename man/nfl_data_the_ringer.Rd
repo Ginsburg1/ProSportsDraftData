@@ -50,3 +50,10 @@ Filter NFL Data by Source (The Ringer)
 \details{
 Filters and selects NFL data from The Ringer for the given source value.
 }
+\examples{
+# Filter NFL data for The Ringer
+ringer_data <- nfl_data_the_ringer()
+
+# View the first few rows
+head(ringer_data)
+}

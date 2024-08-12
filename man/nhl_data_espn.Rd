@@ -29,3 +29,11 @@ Filter NHL Data by Source (ESPN)
 \details{
 Filters and selects NHL data from ESPN for the given source value.
 }
+\examples{
+# Filter NHL data for ESPN
+espn_data <- nhl_data_espn()
+
+# View the first few rows
+head(espn_data)
+
+}

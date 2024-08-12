@@ -77,6 +77,13 @@ load("data/nhl_data.rda")
 #' @export
 #' @name nhl_data_base
 #' @title NHL Data Base
+#' @examples
+#' # Filter NHL data for base source
+#' base_data <- nhl_data_base()
+#'
+#' # View the first few rows
+#' head(base_data)
+#'
 nhl_data_base <- function() {
   nhl_data |>
     dplyr::filter(source == "Base") |>
@@ -105,6 +112,13 @@ nhl_data_base <- function() {
 #' @export
 #' @name nhl_data_espn
 #' @title NHL Data ESPN
+#' @examples
+#' # Filter NHL data for ESPN
+#' espn_data <- nhl_data_espn()
+#'
+#' # View the first few rows
+#' head(espn_data)
+#'
 nhl_data_espn <- function() {
   nhl_data |>
     dplyr::filter(source == "ESPN") |>
@@ -140,6 +154,12 @@ nhl_data_espn <- function() {
 #' @export
 #' @name nhl_data_nhl_com
 #' @title NHL Data NHL.com
+#' @examples
+#' # Filter NHL data for nhl.com
+#' nhl_com_data <- nhl_data_nhl.com()
+#'
+#' # View the first few rows
+#' head(nhl_com_data)
 nhl_data_nhl.com <- function() {
   nhl_data |>
     dplyr::filter(source == "NHL.com") |>

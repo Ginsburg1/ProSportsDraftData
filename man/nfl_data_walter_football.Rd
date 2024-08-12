@@ -40,3 +40,10 @@ Filter NFL Data by Source (Walter Football)
 \details{
 Filters and selects NFL data from Walter Football for the given source value.
 }
+\examples{
+# Filter NFL data for Walter Football source
+walter_data <- nfl_data_walter_football()
+
+# View the first few rows
+head(walter_data)
+}

@@ -23,3 +23,11 @@ Filter NBA Data by Source (Base)
 \details{
 Filters and selects NBA data from the Base (ESPN.com) source.
 }
+\examples{
+# Filter NBA data for base source
+base_data <- nba_data_base()
+
+# View the first few rows
+head(base_data)
+
+}

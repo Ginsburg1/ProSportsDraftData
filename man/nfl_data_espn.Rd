@@ -32,3 +32,10 @@ Filter NFL Data by Source (ESPN)
 \details{
 Filters and selects NFL data from ESPN for the given source value.
 }
+\examples{
+# Filter NFL data for ESPN source
+espn_data <- nfl_data_espn()
+
+# View the first few rows
+head(espn_data)
+}

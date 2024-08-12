@@ -23,3 +23,11 @@ Filter NHL Data by Source (Base)
 \details{
 Filters and selects NHL data from the base source for the given source value.
 }
+\examples{
+# Filter NHL data for base source
+base_data <- nhl_data_base()
+
+# View the first few rows
+head(base_data)
+
+}

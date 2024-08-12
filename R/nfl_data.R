@@ -149,9 +149,16 @@ load("data/nfl_data.rda")
 #' @export
 #' @name nfl_data_base
 #' @title NFL Data Base
+#' @examples
+#' # Filter NFL data for base source
+#' base_data <- nfl_data_base()
+#'
+#' # View the first few rows
+#' head(base_data)
+#'
 nfl_data_base <- function() {
   nfl_data |>
-    dplyr::filter(source == "base") |>
+    dplyr::filter(source == "Base") |>
     dplyr::select(name, round, rank)
 }
 
@@ -180,6 +187,12 @@ nfl_data_base <- function() {
 #' @export
 #' @name nfl_data_espn
 #' @title NFL Data ESPN
+#' @examples
+#' # Filter NFL data for ESPN source
+#' espn_data <- nfl_data_espn()
+#'
+#' # View the first few rows
+#' head(espn_data)
 nfl_data_espn <- function() {
   nfl_data |>
     dplyr::filter(source == "ESPN") |>
@@ -230,6 +243,12 @@ nfl_data_espn <- function() {
 #' @export
 #' @name nfl_data_walter_football
 #' @title NFL Data Walter Football
+#' @examples
+#' # Filter NFL data for Walter Football source
+#' walter_data <- nfl_data_walter_football()
+#'
+#' # View the first few rows
+#' head(walter_data)
 nfl_data_walter_football <- function() {
   nfl_data |>
     dplyr::filter(source == "walterfootball.com") |>
@@ -298,6 +317,12 @@ nfl_data_walter_football <- function() {
 #' @export
 #' @name nfl_data_the_ringer
 #' @title NFL Data The Ringer
+#' @examples
+#' # Filter NFL data for The Ringer
+#' ringer_data <- nfl_data_the_ringer()
+#'
+#' # View the first few rows
+#' head(ringer_data)
 nfl_data_the_ringer <- function() {
   nfl_data |>
     dplyr::filter(source == "The Ringer") |>
@@ -355,6 +380,12 @@ nfl_data_the_ringer <- function() {
 #' @export
 #' @name nfl_data_nfl_com
 #' @title NFL Data NFL.com
+#' @examples
+#' # Filter NFL data for NFL.com
+#' nfl_data <- nfl_data_nfl_com()
+#'
+#' # View the first few rows
+#' head(nfl_data)
 nfl_data_nfl_com <- function() {
   nfl_data |>
     dplyr::filter(source == "NFL.com") |>

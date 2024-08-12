@@ -47,3 +47,11 @@ Filter NBA Data by Source (NBADraft.net)
 \details{
 Filters and selects NBA data from NBADraft.net for the given source value.
 }
+\examples{
+# Filter NFL data for NBADraft.net
+nbadraft <- nba_data_nbadraft_net()
+
+# View the first few rows
+head(nbadraft)
+
+}

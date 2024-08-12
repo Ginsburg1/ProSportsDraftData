@@ -16,7 +16,7 @@ You can install the development version of ProSportsDraftData like so:
 devtools::install_github("Ginsburg1/ProSportsDraftData")
 ```
 
-## Purpose
+## DESCRIPTION
 
 The goal of ProSportsDraftData is to show draft data from different
 sources in the NFL, NBA, and NHL.

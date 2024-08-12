@@ -30,3 +30,11 @@ Filter NBA Data by Source (NBA.com)
 \details{
 Filters and selects NBA data from NBA.com for the given source value.
 }
+\examples{
+# Filter NFL data for NBA.com
+nba_com <- nba_data_nba_com()
+
+# View the first few rows
+head(nba_com)
+
+}

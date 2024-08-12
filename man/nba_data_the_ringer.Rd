@@ -53,3 +53,11 @@ Filter NBA Data by Source (The Ringer)
 \details{
 Filters and selects NBA data from The Ringer for the given source value.
 }
+\examples{
+# Filter NFL data for The Ringer
+ringer_data <- nba_data_the_ringer()
+
+# View the first few rows
+head(ringer_data)
+
+}

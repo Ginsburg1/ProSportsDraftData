@@ -120,6 +120,13 @@ load("data/nba_data.rda")
 #' @export
 #' @name nba_data_base
 #' @title NBA Data Base
+#' @examples
+#' # Filter NBA data for base source
+#' base_data <- nba_data_base()
+#'
+#' # View the first few rows
+#' head(base_data)
+#'
 nba_data_base <- function() {
   nba_data |>
     dplyr::filter(source == "Base") |>
@@ -152,6 +159,13 @@ nba_data_base <- function() {
 #' @export
 #' @name nba_data_espn
 #' @title NBA Data ESPN
+#' @examples
+#' # Filter NBA data for ESPN
+#' espn_data <- nba_data_espn()
+#'
+#' # View the first few rows
+#' head(espn_data)
+#'
 nba_data_espn <- function() {
   nba_data |>
     dplyr::filter(source == "ESPN") |>
@@ -205,6 +219,13 @@ nba_data_espn <- function() {
 #' @export
 #' @name nba_data_the_ringer
 #' @title NBA Data The Ringer
+#' @examples
+#' # Filter NFL data for The Ringer
+#' ringer_data <- nba_data_the_ringer()
+#'
+#' # View the first few rows
+#' head(ringer_data)
+#'
 nba_data_the_ringer <- function() {
   nba_data |>
     dplyr::filter(source == "The Ringer") |>
@@ -254,6 +275,13 @@ nba_data_the_ringer <- function() {
 #' @export
 #' @name nba_data_nbadraft_net
 #' @title NBA Data NBADraft.net
+#' @examples
+#' # Filter NFL data for NBADraft.net
+#' nbadraft <- nba_data_nbadraft_net()
+#'
+#' # View the first few rows
+#' head(nbadraft)
+#'
 nba_data_nbadraft_net <- function() {
   nba_data |>
     dplyr::filter(source == "NBADraft.net") |>
@@ -286,6 +314,13 @@ nba_data_nbadraft_net <- function() {
 #' @export
 #' @name nba_data_nba_com
 #' @title NBA Data NBA.com
+#' @examples
+#' # Filter NFL data for NBA.com
+#' nba_com <- nba_data_nba_com()
+#'
+#' # View the first few rows
+#' head(nba_com)
+#'
 nba_data_nba_com <- function() {
   nba_data |>
     dplyr::filter(source == "NBA.com") |>

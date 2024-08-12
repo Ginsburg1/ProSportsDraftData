@@ -64,10 +64,10 @@ The `ProSportsDraftData` package provides several data sets:
   - **NHL**: https://www.nhl.com/news/
   
 - **walterfootball.com**:
-  - **NFL**: https://walterfootball.com/scoutingreport
+  - **NFL**: https://walterfootball.com/
   
 - **NFL.com**: 
-  - **NFL**: https://www.nfl.com/prospects/
+  - **NFL**: https://www.nfl.com/prospects/participants/all/
 
 
 ## The `nfl` Dataset
@@ -286,8 +286,8 @@ The NFL data has been compiled from multiple sources. The five different data se
 
 To see the data from a specific source, use the following functions:
 
-- **Base (ESPN.com)**: `nfl_data_base()`
-- **NBA.com**: `nfl_data_nba_com()`
-- **NBADraft.net**: `nfl_data_nbadraft_net()`
-- **The Ringer**: `nfl_data_the_ringer()`
-- **ESPN**: `nfl_data_espn()`
+- **Base (ESPN.com)**: `nba_data_base()`
+- **NBA.com**: `nba_data_nba_com()`
+- **NBADraft.net**: `nba_data_nbadraft_net()`
+- **The Ringer**: `nba_data_the_ringer()`
+- **ESPN**: `nba_data_espn()`

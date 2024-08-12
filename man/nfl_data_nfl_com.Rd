@@ -30,3 +30,10 @@ Filter NFL Data by Source (NFL.com)
 \details{
 Filters and selects NFL data from NFL.com for the given source value.
 }
+\examples{
+# Filter NFL data for NFL.com
+nfl_data <- nfl_data_nfl_com()
+
+# View the first few rows
+head(nfl_data)
+}
