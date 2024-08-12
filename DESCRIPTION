@@ -1,7 +1,7 @@
 Package: ProSportsDraftData
 Type: Package
 Title: Professional Sports Draft Data
-Version: 2.0.0
+Version: 1.0.0
 Author: Benjamin Ginsburg [aut, cre]
 Maintainer: Benjamin Ginsburg <benjamin.ginsburg@du.edu>
 Description: Provides draft data from various sources for professional sports leagues, including the NFL, NBA, and NHL.
