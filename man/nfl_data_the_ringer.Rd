@@ -10,7 +10,7 @@ A \code{tibble} with the following columns:
   \item{\code{rank}}{The rank of the player.}
   \item{\code{year}}{The draft year of the player.}
   \item{\code{position}}{The position of the player.}
-  \item{\code{school}}{The school the player attended.}
+  \item{\code{college}}{The college the player attended.}
   \item{\code{grade}}{The grade of the player.}
   \item{\code{yds}}{The number of yards the player ran.}
   \item{\code{ypa}}{The yards per attempt.}

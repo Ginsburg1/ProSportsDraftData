@@ -222,6 +222,8 @@ nfl_data_espn <- function() {
 #'   \item{\code{weight}}{The weight of the player.}
 #'   \item{\code{arm_length}}{The arm length of the player.}
 #'   \item{\code{hand_length}}{The hand length of the player.}
+#'   \item{\code{college}}{The college the player attended.}
+#'   \item{\code{position}}{The position of the player.}
 #'   \item{\code{next_gen_production_score}}{The Next Gen production score.}
 #'   \item{\code{next_gen_athleticism_score}}{The Next Gen athleticism score.}
 #'   \item{\code{forty_yard_dash}}{The forty-yard dash time.}
@@ -257,6 +259,8 @@ nfl_data_walter_football <- function() {
                   height,
                   weight,
                   arm_length,
+                  college,
+                  position,
                   hand_length,
                   next_gen_production_score,
                   next_gen_athleticism_score,
@@ -284,7 +288,7 @@ nfl_data_walter_football <- function() {
 #'   \item{\code{rank}}{The rank of the player.}
 #'   \item{\code{year}}{The draft year of the player.}
 #'   \item{\code{position}}{The position of the player.}
-#'   \item{\code{school}}{The school the player attended.}
+#'   \item{\code{college}}{The college the player attended.}
 #'   \item{\code{grade}}{The grade of the player.}
 #'   \item{\code{yds}}{The number of yards the player ran.}
 #'   \item{\code{ypa}}{The yards per attempt.}
@@ -330,7 +334,7 @@ nfl_data_the_ringer <- function() {
                   rank,
                   year,
                   position,
-                  school,
+                  college,
                   grade,
                   yds,
                   ypa,

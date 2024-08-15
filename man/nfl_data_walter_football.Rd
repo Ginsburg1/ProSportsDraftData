@@ -12,6 +12,8 @@ A \code{tibble} with the following columns:
   \item{\code{weight}}{The weight of the player.}
   \item{\code{arm_length}}{The arm length of the player.}
   \item{\code{hand_length}}{The hand length of the player.}
+  \item{\code{college}}{The college the player attended.}
+  \item{\code{position}}{The position of the player.}
   \item{\code{next_gen_production_score}}{The Next Gen production score.}
   \item{\code{next_gen_athleticism_score}}{The Next Gen athleticism score.}
   \item{\code{forty_yard_dash}}{The forty-yard dash time.}
