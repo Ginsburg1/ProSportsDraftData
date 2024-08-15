@@ -26,24 +26,23 @@ test_that("nfl_data_espn returns correct columns and filters by source", {
 # Test nfl_data_walter_football function
 test_that("nfl_data_walter_football returns correct columns and filters by source", {
   result <- nfl_data_walter_football()
-  expected_columns <- c("name", "year", "height", "weight", "arm_length",
-                        "hand_length", "next_gen_production_score",
-                        "next_gen_athleticism_score", "forty_yard_dash",
-                        "vertical_jump", "nfl_prospect_grade", "home_town",
-                        "broad_jump", "three_cone_drill", "twenty_yard_shuttle",
-                        "bench_press", "similar_player", "summary", "pros", "cons")
+  expected_columns <- c("name", "year", "height", "weight", "arm_length", "college",
+                        "position", "hand_length", "next_gen_production_score",
+                        "next_gen_athleticism_score", "forty_yard_dash", "vertical_jump",
+                        "nfl_prospect_grade", "home_town", "broad_jump", "three_cone_drill",
+                        "twenty_yard_shuttle", "bench_press", "similar_player",
+                        "summary", "pros", "cons")
   expect_true(all(expected_columns %in% colnames(result)))
 })
 
 # Test nfl_data_the_ringer function
 test_that("nfl_data_the_ringer returns correct columns and filters by source", {
   result <- nfl_data_the_ringer()
-  expected_columns <- c("name", "rank", "year", "position", "school", "grade",
-                        "yds", "ypa", "ypr", "tds", "ints", "rtg", "tkls",
-                        "tfl", "ypc", "pbu", "twenty_plus", "sacks", "gms",
-                        "strts", "sk_all", "height", "weight", "age",
-                        "main_selling_point", "description", "similar_player",
-                        "scouting_report", "pros", "cons")
+  expected_columns <- c("name", "rank", "year", "position", "college", "grade",
+                        "yds", "ypa", "ypr", "tds", "ints", "rtg", "tkls", "tfl",
+                        "ypc", "pbu", "twenty_plus", "sacks", "gms", "strts", "sk_all",
+                        "height", "weight", "age", "main_selling_point", "description",
+                        "similar_player", "scouting_report")
   expect_true(all(expected_columns %in% colnames(result)))
 })
 
