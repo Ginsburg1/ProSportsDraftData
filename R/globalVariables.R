@@ -1,0 +1,20 @@
+utils::globalVariables(c(
+  "name", "year", "height", "weight", "school", "college_abbreviation",
+  "pros", "cons", "verdict", "pre_draft_analysis", "post_draft_analysis",
+  "ranking", "player_score", "position", "grade", "date_of_birth", "analysis",
+  "projection", "hometown", "high_school", "international_team", "athleticism",
+  "size", "defense", "strength", "quickness", "leadership", "jumpshot",
+  "nba_ready", "rebounding", "potential", "post_skills", "intangibles",
+  "mock_draft_rank", "big_board_rank", "overall_rank", "similar_player", "age",
+  "wingspan", "standing_reach", "scouting_report", "team_fit", "likely_to_play",
+  "current_team", "league", "city", "team", "arm_length", "college_abbrivation",
+  "source", "round", "pts_total", "pts_per40", "reb_total", "reb_per40", "ast_total",
+  "ast_per40", "efg", "fga", "ft", "fta", "stl_total", "stl_per40", "blk_total",
+  "blk_per40", "tpt", "tpa", "ts_att", "main_selling_point", "description",
+  "yds", "ypa", "ypr", "tds", "ints", "rtg", "tkls", "tfl", "ypc", "pbu", "twenty_plus",
+  "sacks", "gms", "strts", "sk_all", "bench_press", "vertical_jump", "three_cone_drill",
+  "twenty_yard_shuttle", "broad_jump", "forty_yard_dash", "nfl_prospect_grade",
+  "next_gen_production_score", "next_gen_athleticism_score", "hand_length",
+  "arm_length", "weight", "home_town", "position_rank", "overall_rank", "score",
+  "pre_draft", "post_draft","college"
+))
