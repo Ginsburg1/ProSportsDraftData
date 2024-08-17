@@ -7,40 +7,11 @@ editor_options:
 
 # Summary
 
-The`ProSportsDraftData` package provides researchers and analysts with a
-tool to view and analyze scouting reports for draft picks. Through using
-web scraping tools in R, this package makes it easier to view biases in
-scouting reports and improving draft strategies. The significance of
-sports drafts is highlighted by events like Brock Purdy being selected
-256th overall. Even though he was selected last overall in the draft,
-certain verbiage could be analyzed to see why teams did not draft him
-earlier and why he became a prominent quarterback. Another reason why
-this package was created is due to the popularity of the major sports.
-For instance, the 2024 NFL draft took place in Detroit with over 700,000
-live spectators and the NHL draft was at the Las Vegas Sphere. As drafts
-have become more and more prominent, this package will fill a current
-hole within the R that allows users to more easily view data about draft
-picks. Overall, this package represents a large-scale scraping endeavor
-which allows for much more analysis within R and in one source.
+The`ProSportsDraftData` package provides researchers and analysts with a tool to view and analyze scouting reports for draft picks. Through using web scraping tools in R, this package makes it easier to view biases inscouting reports and improving draft strategies. The significance of sports drafts is highlighted by events like Brock Purdy being selected 256th overall. Even though he was selected last overall in the draft,certain verbiage could be analyzed to see why teams did not draft him earlier and why he became a prominent quarterback. Another reason why this package was created is due to the popularity of the major sports. For instance, the 2024 NFL draft took place in Detroit with over 700,000 live spectators and the NHL draft was at the Las Vegas Sphere. As drafts have become more and more prominent, this package will fill a currenthole within the R that allows users to more easily view data about draft picks. This package aims to fill a gap in R, making it easier to access and analyze draft data from various sports in one source.
 
 # Statement of Need
 
-All the major sports in the US, the draft is an important element for
-all leagues for both fans and the teams. The `ProSportsDraftData`
-package is only R package that combines all the different draft data
-into one source allowing easier research. This package enables a deeper
-investigation into these biases and other aspects of scouting language,
-offering insights that have not been analyzed using an R package before.
-In addition, we suppose there may be biased language in these reports
-because in some sports, as most of the players are from an ethnic
-minority. One similar paper, by Michael Shuckers discusses the use of
-historical data, such as player demographics, pre-draft performance, and
-scouting rankings, to build a statistical prediction model for NHL
-players' performance. The model was tested on two sets of players,
-consistently showing that the statistical approach was more effective at
-predicting player success than traditional draft methods. This R package
-would help analyze the data because it would make it easier find the
-data.
+All the major sports in the US, the draft is an important element for all leagues for both fans and the teams. The `ProSportsDraftData` package is only R package that combines all the different draft data into one source allowing easier research. This package enables a deeper investigation into these biases and other aspects of scouting language, offering insights that have not been analyzed using an R package before. In addition, we suppose there may be biased language in these reports because in some sports, as most of the players are from an ethnic minority. One similar paper, by Michael Shuckers discusses the use of historical data, such as player demographics, pre-draft performance, and scouting rankings, to build a statistical prediction model for NHL players' performance. The model was tested on two sets of players, consistently showing that the statistical approach was more effective at predicting player success than traditional draft methods. This R package would help analyze the data because it would make it easier find the data.
 
 
 
@@ -48,11 +19,7 @@ Data
 
 -How the scraping was carried out
 
-To scrape the data, I used a combination of RSelenium and RVest.
-Whenever a website required manipulating (e.g. clicking, changing
-website dimensions) RSelenium was used, else RVest was used. Wihtin each
-link provided; all the website data was scraped then placed into tibbles
-with the respective player name.
+To scrape the data, I used a combination of RSelenium and RVest. Whenever a website required manipulating (e.g. clicking, changing website dimensions) RSelenium was used, else RVest was used. The scraped data was then organized into tibbles with corresponding player names.
 
 -What the data sources are
 
@@ -122,19 +89,10 @@ nba_data_nbadraft_net() |>
 
 # Conclusion
 
-The `ProSportsDraftData` R package consolidates and analyzes draft data
-from the NFL, NBA, and NHL, addressing a significant gap in sports
-analytics by providing a coinvent source for all data. This package web
-scraping tools to compile datasets from various sources, allowing
-researchers and analysts to view and analyze various elements of draft
-data. As sports drafts continue to become more important, the package
-offers organized information in one source.
+The `ProSportsDraftData` R package consolidates and analyzes draft data from the NFL, NBA, and NHL, addressing a significant gap in sportsanalytics by providing a coinvent source for all data. This package webscraping tools to compile datasets from various sources, allowingresearchers and analysts to view and analyze various elements of draftdata. As sports drafts continue to become more important, the packageoffers organized information in one source.
 
 # Citations
-Schuckers, Michael E. “Raft by Numbers: Using Data and Analytics to
-Improve National Hockey League (NHL) Player Selection.” Sports Anlaysics
-Confriance, sports analytics conference, 11 Mar. 2016,
-myslu.stlawu.edu/\~msch/SchuckersDraftByNumbers2016.pdf.
+Schuckers, Michael E. “Raft by Numbers: Using Data and Analytics to Improve National Hockey League (NHL) Player Selection.” Sports Anlaysics Confriance, sports analytics conference, 11 Mar. 2016, myslu.stlawu.edu/\~msch/SchuckersDraftByNumbers2016.pdf.
 
 
 # Acknowledgements
