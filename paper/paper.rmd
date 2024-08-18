@@ -3,25 +3,31 @@ editor_options:
   markdown: 
     wrap: 72
 ---
-## `ProSportsDraftData: An R package for Professional Sports Draft Data`\
+## `ProSportsDraftData: An R package for Professional Sports Draft Data`
 
 # Summary
 
-The`ProSportsDraftData` package provides researchers and analysts with a tool to view and analyze scouting reports for draft picks. Through using web scraping tools in R, this package makes it easier to view biases inscouting reports and improving draft strategies. The significance of sports drafts is highlighted by events like Brock Purdy being selected 256th overall. Even though he was selected last overall in the draft,certain verbiage could be analyzed to see why teams did not draft him earlier and why he became a prominent quarterback. Another reason why this package was created is due to the popularity of the major sports. For instance, the 2024 NFL draft took place in Detroit with over 700,000 live spectators and the NHL draft was at the Las Vegas Sphere. As drafts have become more and more prominent, this package will fill a currenthole within the R that allows users to more easily view data about draft picks. This package aims to fill a gap in R, making it easier to access and analyze draft data from various sports in one source.
+The`ProSportsDraftData` package provides researchers and analysts with a tool to view and analyze scouting reports for potential draft picks in three major men's professional sport drafts (NBA, NFL, and NHL). Professional teams are alloted draft slots where they select amateur players to join their team.
+
+This package provides scouting reports from 13 sources for the three leagues. The data allows for many potential analyses, including: determining if there are biases in scouting reports for athletes of different racial or ethnic backgrounds and improving draft strategies for professional teams. The significance of sports drafts is highlighted by events such as quarterback Brock Purdy being selected with the last pick in the 2022 NFL draft but ending up as one of the most successful quarterbacks in the league. The scouting report data provided in this package could offer reasons why he was drafted so late.
+
 
 # Statement of Need
 
-All the major sports in the US, the draft is an important element for all leagues for both fans and the teams. The `ProSportsDraftData` package is only R package that combines all the different draft data into one source allowing easier research. This package enables a deeper investigation into these biases and other aspects of scouting language, offering insights that have not been analyzed using an R package before. In addition, we suppose there may be biased language in these reports because in some sports, as most of the players are from an ethnic minority. One similar paper, by Michael Shuckers discusses the use of historical data, such as player demographics, pre-draft performance, and scouting rankings, to build a statistical prediction model for NHL players' performance. The model was tested on two sets of players, consistently showing that the statistical approach was more effective at predicting player success than traditional draft methods. This R package would help analyze the data because it would make it easier find the data.
+The draft is an important element for all professional sports leagues for both fans and the teamss themselve. The `ProSportsDraftData` package is an R package that combines all the different draft data into one source allowing easier research. This package enables a deeper investigation of the draft, offering insights that may have not been analyzed before. 
+
+This package is further important due to the popularity of professional sports. For instance, the 2024 NFL draft took place in Detroit with over 700,000 live spectators and the 2024 NHL draft was at the popular Las Vegas Sphere. This package fills a current lack of simple scouting report data accessibility. It allows users to more easily view and analyze data about draft picks. R is an important platform for this package because of its open source nature and use in the sports analytics community, see Elmore and Urb book citation.
+
+In a 2016 article, Michael Shuckers CITE discusses the use of historical data, such as player demographics, pre-draft performance, and scouting rankings, to build a statistical prediction model for NHL players' performance. The model was tested on two sets of players, consistently showing the statistical approach to be more effective at predicting player success than traditional draft methods. The `ProSportsDraftData` R package would greatly aid such an analysis because it would the data gathering process easier and give researchers a wider dataset to draw from.
 
 
+## Data
 
-Data
+- How the scraping was carried out
 
--How the scraping was carried out
+To scrape the data, a combination of RSelenium and RVest R packages were used. Whenever a website required manipulating (e.g. clicking, changing website dimensions) RSelenium was used, otherwise RVest was used. The scraped data was organized into tibbles with corresponding player names.
 
-To scrape the data, I used a combination of RSelenium and RVest. Whenever a website required manipulating (e.g. clicking, changing website dimensions) RSelenium was used, else RVest was used. The scraped data was then organized into tibbles with corresponding player names.
-
--What the data sources are
+- What the data sources are
 
 The `ProSportsDraftData` package provides several data sets:
 
@@ -57,7 +63,7 @@ The `ProSportsDraftData` package provides several data sets:
 
 # Functionality
 
-## Few examples of using the package
+## A few examples of using the package
 
 Different heights of players from the ESPN source in the NFL.
 ```{r}
@@ -70,7 +76,8 @@ nfl_data_espn() |>
 ```
 
 
-All of the players from Alabama from the ESPN source. All of the different leagues that NHL players came from according to ESPN.
+All of the players from Alabama according to ESPN. All of the different leagues that NHL players came from according to ESPN.
+
 ```{r}
 library(ProSportsDraftData)
 nfl_data_espn() |>
@@ -78,8 +85,8 @@ nfl_data_espn() |>
 ```
 
 
+List of "similar players" to the potential NBA draft pick from nbadraft.net that were under 74 inches.
 
-List of Similar players in the nba form nbadraft.net that were under 74 inches.
 ```{r}
 library(ProSportsDraftData)
 nba_data_nbadraft_net() |>
@@ -89,10 +96,7 @@ nba_data_nbadraft_net() |>
 
 # Conclusion
 
-The `ProSportsDraftData` R package consolidates and analyzes draft data from the NFL, NBA, and NHL, addressing a significant gap in sportsanalytics by providing a coinvent source for all data. This package webscraping tools to compile datasets from various sources, allowingresearchers and analysts to view and analyze various elements of draftdata. As sports drafts continue to become more important, the packageoffers organized information in one source.
+The `ProSportsDraftData` R package consolidates and analyzes draft data from the NFL, NBA, and NHL, addressing a significant gap in sports analytics by providing a convenient source for the data. This package compiles datasets from various sources, allowing researchers and analysts to view and analyze various elements of draft data. As sports drafts continue to become more important, the package offers organized information in one source.
 
 # Citations
 Schuckers, Michael E. “Raft by Numbers: Using Data and Analytics to Improve National Hockey League (NHL) Player Selection.” Sports Anlaysics Confriance, sports analytics conference, 11 Mar. 2016, myslu.stlawu.edu/\~msch/SchuckersDraftByNumbers2016.pdf.
-
-
-# Acknowledgements
