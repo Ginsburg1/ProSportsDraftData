@@ -6,7 +6,7 @@
 \alias{ProSportsDraftData-package}
 \title{ProSportsDraftData: Professional Sports Draft Data}
 \description{
-Provides draft data from various sources for professional sports leagues, including the NFL, NBA, and NHL.
+The `ProSportsDraftData` package provides comprehensive draft data for major professional sports leagues, including the National Football League (NFL), National Basketball Association (NBA), and National Hockey League (NHL). It offers access to both historical and current draft data, allowing for detailed analysis and research on player biases and player performance. The package is useful for sports fans and researchers interested in identifying biases and trends within scouting reports. Created by web scraping data from leading websites that cover professional sports player scouting reports, the package allows users to filter and summarize data for analytical purposes. For further details on the methods used, please refer to Wickham (2022) "rvest: Easily Harvest (Scrape) Web Pages" https://CRAN.R-project.org/package=rvest and Harrison (2023) "RSelenium: R Bindings for Selenium WebDriver" \url{https://CRAN.R-project.org/package=RSelenium}.
 }
 \seealso{
 Useful links:
