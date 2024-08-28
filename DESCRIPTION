@@ -1,7 +1,7 @@
 Package: ProSportsDraftData
 Type: Package
 Title: Professional Sports Draft Data
-Version: 1.0.2
+Version: 1.0.3
 Author: Benjamin Ginsburg [aut, cre]
 Maintainer: Benjamin Ginsburg <benjamin.ginsburg@du.edu>
 Description: We provide comprehensive draft data for major professional sports leagues, including the National Football League (NFL), National Basketball Association (NBA), and National Hockey League (NHL). It offers access to both historical and current draft data, allowing for detailed analysis and research on player biases and player performance. The package is useful for sports fans and researchers interested in identifying biases and trends within scouting reports. Created by web scraping data from leading websites that cover professional sports player scouting reports, the package allows users to filter and summarize data for analytical purposes. For further details on the methods used, please refer to Wickham (2022) "rvest: Easily Harvest (Scrape) Web Pages" <https://CRAN.R-project.org/package=rvest> and Harrison (2023) "RSelenium: R Bindings for Selenium WebDriver" <https://CRAN.R-project.org/package=RSelenium>.
